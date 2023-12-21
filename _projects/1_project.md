@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Multilayer project 1
+title: project 1
 description: Multilayer FDR control with e-values
 img: assets/img/multilayer_fdr.png 
 importance: 1
