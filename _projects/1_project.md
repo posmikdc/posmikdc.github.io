@@ -2,24 +2,24 @@
 layout: page
 title: Multilayer FDR control with e-values
 description: How can we control for false discoveries across partioned data?
-img: assets/img/12.jpg
+img: assets/img/multilayer_fdr.png 
 importance: 1
 category: work
-related_publications: e0instein1956investigations, einstein1950meaning
+related_publications:
 ---
 
 ## Introduction
 
 Sometimes we want to test hypotheses within groups or partitions, i.e. testing the effect of multiple drugs with many patients in each drug-specific cohort. In literature, there are well-established methods to control false discovery rates (FDR) in groups, i.e. the group-weighted Benjamini-Hochberg (weighted BH) procedure (see, [Benjamini & Cohen, 2017](https://academic.oup.com/biostatistics/article/18/1/91/2555340)). Now, a key weakness of this procedure is its invalidity when the independence assumption is violated. In practice, the independence assumption is usually strong. Thus, we are curious to explore FDR control within partitions under dependence scenarios. 
 
-For this project, we consider e-values as an alternative to p-values since e-values allow for dependence (see, [Wang & Ramdas, 2019](https://academic.oup.com/jrsssb/article/84/3/822/7056146)). Specifically, we shall discuss e-values, their applications, transformations, and finally an e-filter adaptation to the p-filter procedure proposed in Ramdas et al, 2019 (The p-filter allows for multi-layer FDR control for grouped hypotheses).
+For this project, we consider e-values as an alternative to p-values since e-values allow for dependence (see, [Wang & Ramdas, 2022](https://academic.oup.com/jrsssb/article/84/3/822/7056146)). Specifically, we shall discuss e-values, their applications, transformations, and finally an e-filter adaptation to the p-filter procedure proposed in [Ramdas et al, 2019](https://arxiv.org/abs/1703.06222) (The p-filter allows for multi-layer FDR control for grouped hypotheses).
 
-[Wang & Ramdas, 2019](https://academic.oup.com/jrsssb/article/84/3/822/7056146) propose an interesting example in Section 8, aiming to detect cryptocurrencies with a positive return. We take inspiration from this example, but in the interest of time and conciseness, modify their example in several meaningful ways. First, we do not have access to the data, so we simulate year-to-year rate of change in stock price (see details below). Next, we do not consider this example in an investment setting, i.e. we set their investment parameter $$ \lambda $$ equal to 1. That means that we hold constant our investment and thus interested in identifying which coins seem promising in what year.
+[Wang & Ramdas, 2022](https://academic.oup.com/jrsssb/article/84/3/822/7056146) propose an interesting example in Section 8, aiming to detect cryptocurrencies with a positive return. We take inspiration from this example, but in the interest of time and conciseness, modify their example in several meaningful ways. First, we do not have access to the data, so we simulate year-to-year rate of change in stock price (see details below). Next, we do not consider this example in an investment setting, i.e. we set their investment parameter $$\lambda$$ equal to 1. That means that we hold constant our investment and thus interested in identifying which coins seem promising in what year.
 
 
 ### Generating data and e-values
 
-E-values are heavily context-dependent. Depending on the analyst's level of familiarity with the setting, this may be good or bad. For this simulation, we adapt a modified version of the example in Section (8) in [Wang & Ramdas, 2021](https://academic.oup.com/jrsssb/article/84/3/822/7056146). In essence, the authors propose an e-value approach to detecting cryptocurrencies with positive expected return. There are $$K$$ different cryptocurrencies ("coins") over $$T$$ periods of time.
+E-values are heavily context-dependent. Depending on the analyst's level of familiarity with the setting, this may be good or bad. For this simulation, we adapt a modified version of the example in Section (8) in [Wang & Ramdas, 2022](https://academic.oup.com/jrsssb/article/84/3/822/7056146). In essence, the authors propose an e-value approach to detecting cryptocurrencies with positive expected return. There are $$K$$ different cryptocurrencies ("coins") over $$T$$ periods of time.
 
 We are modifying the authors' example as follows: Since we don't have access to their data, we consider two distinct data-generating processes to obtain our year-to-year stock rate of change. First, we consider a scenario where all values are sampled i.i.d. from a truncated normal distribution, $$TN(\mu = 1,\sigma = 1;\text{trunc-null},\infty)$$. This will yield the year-to-year percentage positive change in the price of stock of a specific cryptocurrency, e.g. $$X_{i,j} > 1$$ if a coin's value had increased. Second, we are considering a sequential dependence scenario inspired by the authors' example. Rather than sampling data i.i.d. from a truncated normal with mean 1, we introduce sequential dependence by letting a previous realization become the next period's mean.
 
@@ -178,13 +178,6 @@ We think this e-value design coupled with group-wise inference could be relevant
 
 We can see that the p-values are indeed lower for the signal (recall that even row indices are classified as signals) coins. The differences in p-values are far more pronounced in the `Pg_iid` vector, owing to the large maximum e-values. The group-wise p-values for the `Pg_dep` case are high, but do not vary as drastically between nulls and signals. 
 
-### Group e-BH
-
-We can run an group e-BH procedure on the p-values for `Pvec_iid` and `Pvec_dep`. 
-
-# RISHI -- CAN YOU DO THIS?
-## This would entail running group BH on `Pvec_iid` and `Pvec_dep`!
-
 ### An `e-filter` approach
 
 Although the previous finding is promising in terms of conducting inference under dependence, what happens if we are interested controlling for FDR beyond the group-level? That question is why we will explore the `pfilter` function. The `p-filter` is designed to guarantee FDR control across multiple partitions of hypotheses. Our endeavor in exploring the `p-filter` in an e-value framework is to reformulate the computational task of running `e-filter` into a `p-filter` task so that we can use the existing code. 
@@ -292,11 +285,6 @@ Discoveries1_dep
 In the `Pvec_dep` case, we see that we have no discoveries at the specified levels of `alpha`. As we saw before, this is because (i) the p-values are already very high and (ii) the additional layer of FDR control (group-specific and overall) takes its toll. Alternatively, we could adjust our `alpha` values. However, it is also important to note that our simulation sample is very small and therefore the sequential dependence relationship has little room to "unfold". In a real-world scenario, the sequential dependence relationship would likely become more pronounced over more time periods.  
 
 All in all, this simulation is an example of how difficult it is to conduct valid inference under dependence. P-values come with a precise probabilistic meaning, but fail under dependence. E-values are heavily context-dependent and can be harmful in the wrong application, but allow for flexibility under dependence. Future research in the replicability and use of of e-values under dependence sounds very intriguing to us after conducting this project. 
-
-### Conclusion
-
-# RISHI -- CAN YOU DO THIS?
-## Basically, compare the results of group BH vs. p-filter?
 
 
 
