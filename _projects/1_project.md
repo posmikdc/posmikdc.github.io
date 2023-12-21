@@ -16,6 +16,15 @@ For this project, we consider e-values as an alternative to p-values since e-val
 
 [Wang & Ramdas, 2022](https://academic.oup.com/jrsssb/article/84/3/822/7056146) propose an interesting example in Section 8, aiming to detect cryptocurrencies with a positive return. We take inspiration from this example, but in the interest of time and conciseness, modify their example in several meaningful ways. First, we do not have access to the data, so we simulate year-to-year rate of change in stock price (see details below). Next, we do not consider this example in an investment setting, i.e. we set their investment parameter $$\lambda$$ equal to 1. That means that we hold constant our investment and thus interested in identifying which coins seem promising in what year.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/multilayer_fdr.png" title="Hypotheses across partitions" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This figure was taken from [Ramdas et al., 2019](https://arxiv.org/abs/1703.06222) and visualizes various partitions and groupings of hypotheses
+</div>
+
 
 ### Generating data and e-values
 
