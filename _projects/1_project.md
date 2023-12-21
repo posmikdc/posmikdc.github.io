@@ -17,11 +17,88 @@ For this project, we consider e-values as an alternative to p-values since e-val
 [Wang & Ramdas, 2019](https://academic.oup.com/jrsssb/article/84/3/822/7056146) propose an interesting example in Section 8, aiming to detect cryptocurrencies with a positive return. We take inspiration from this example, but in the interest of time and conciseness, modify their example in several meaningful ways. First, we do not have access to the data, so we simulate year-to-year rate of change in stock price (see details below). Next, we do not consider this example in an investment setting, i.e. we set their investment parameter $\lambda$ equal to 1. That means that we hold constant our investment and thus interested in identifying which coins seem promising in what year.
 
 ## Generating data and e-values
-E-values are heavily context-dependent. Depending on the analyst’s level of familiarity with the setting, this may be good or bad. For this simulation, we adapt a modified version of the example in Section (8) in Wang & Ramdas. In essence, the authors propose an e-value approach to detecting cryptocurrencies with positive expected return. There are K different cryptocurrencies (“coins”) over T periods of time.
 
-We are modifying the authors’ example as follows: Since we don’t have access to their data, we consider two distinct data-generating processes to obtain our year-to-year stock rate of change. First, we consider a scenario where all values are sampled i.i.d. from a truncated normal distribution, $TN(\mu=1,\sigma=1;trunc-null,\infty)$. This will yield the year-to-year percentage positive change in the price of stock of a specific cryptocurrency, e.g. $Xi,j>1$ if a coin’s value had increased. Second, we are considering a sequential dependence scenario inspired by the authors’ example. Rather than sampling data i.i.d. from a truncated normal with mean 1, we introduce sequential dependence by letting a previous realization become the next period’s mean.
+E-values are heavily context-dependent. Depending on the analyst's level of familiarity with the setting, this may be good or bad. For this simulation, we adapt a modified version of the example in Section (8) in [Wang & Ramdas, 2021](https://academic.oup.com/jrsssb/article/84/3/822/7056146). In essence, the authors propose an e-value approach to detecting cryptocurrencies with positive expected return. There are $K$ different cryptocurrencies ("coins") over $T$ periods of time.
+
+We are modifying the authors' example as follows: Since we don't have access to their data, we consider two distinct data-generating processes to obtain our year-to-year stock rate of change. First, we consider a scenario where all values are sampled i.i.d. from a truncated normal distribution, $TN(\mu = 1,\sigma = 1;\text{trunc-null},\infty)$. This will yield the year-to-year percentage positive change in the price of stock of a specific cryptocurrency, e.g. $X_{i,j} > 1$ if a coin's value had increased. Second, we are considering a sequential dependence scenario inspired by the authors' example. Rather than sampling data i.i.d. from a truncated normal with mean 1, we introduce sequential dependence by letting a previous realization become the next period's mean.
+
+\[
+\text{Initialize } X_{k,t_0} = 1. \text{Then,} 
+\]
+\[
+X_{k,1} \sim TN(\mu = X_{k,t_0}, \sigma = 1; \text{trunc-null}, \infty),\, X_{k,2} \sim TN(\mu = X_{k,1}, \sigma = 1; \text{trunc-null}, \infty),\, \ldots,\, 
+\]
+\[
+X_{k,T} \sim TN(\mu = X_{k,T-1}, \sigma = 1; \text{trunc-null}, \infty)
+\]
+
+In the i.i.d scenario, we will calculate e-values as the cumulative product of $X_{ij}$: 
+
+\[
+E_{k,t} = \prod_{j=1}^{t} (X_{k,j}), \quad t=1,...,T.
+\]
+
+This is equivalent to the authors' derivation of e-values, $E_{k,t} = \prod_{j=1}^{t} (1 - \lambda + \lambda X_{k,j}), \quad t=1,...,T.$, when setting the investment parameter $\lambda = 1$.
 
 
+```{r}
+# Inputs
+nrow = 4; ncol = 5
+trunc_null = 0; trunc_signal = 4
+
+# Matrix shell
+X_iid <- matrix(NA, nrow = nrow, ncol = ncol)
+
+# Sampling Loop
+for (k in 1:nrow) {
+  for (t in 1:ncol) {
+    if (k %% 2 == 0){
+      # Sample a signal from truncated normal distribution
+      X_iid[k, t] <- rtruncnorm(1, a = trunc_signal, mean = 1, sd = 1)
+    } else{
+      # Sample a null from truncated normal distribution
+      X_iid[k, t] <- rtruncnorm(1, a = trunc_null, mean = 1, sd = 1)
+    }
+    
+  }
+}
+
+# Print
+X_iid
+```
+
+```{r}
+# Inputs
+nrow = 4; ncol = 5
+trunc_null = 0; trunc_signal = 4
+
+# Matrix shell
+X_dep <- matrix(NA, nrow = nrow, ncol = ncol)
+
+# Sampling Loop
+for (k in 1:nrow) {
+  # Initialize the mean for the current row
+  row_mean <- 1
+  
+  for (t in 1:ncol) {
+    if (k %% 2 == 0){
+      # Sample from a truncated normal distribution with lower bound of 0
+      X_dep[k, t] <- rtruncnorm(1, a = trunc_signal, mean = row_mean, sd = 1)
+    } else {
+      # Sample from a truncated normal distribution with lower bound of 0
+      X_dep[k, t] <- rtruncnorm(1, a = trunc_null, mean = row_mean, sd = 1)
+    }
+    
+    # Update the mean for the next sample in the same row
+    row_mean <- X_dep[k, t]
+  }
+}
+
+# Print
+X_dep
+```
+
+The matrices `X_iid` and `X_dep` both represent the year-to-year percentage positive change in the price of stock of a specific cryptocurrency. However, `X_dep` represents sequentially dependent data. Note that we have also introduced signals into the matrices by varying the truncation cutoff. For even coins, i.e. `k %% 2 == 0`, our realizations of year-to-year growth are significantly higher than for the other coins, symbolizing a signal. 
 
 
 
