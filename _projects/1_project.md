@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Multilayer FDR control with e-values
-description: How can we control for false discoveries across partioned data?
+title: Multilayer project 1
+description: Multilayer FDR control with e-values
 img: assets/img/multilayer_fdr.png 
 importance: 1
 category: work
