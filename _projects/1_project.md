@@ -22,21 +22,24 @@ For this project, we consider e-values as an alternative to p-values since e-val
     </div>
 </div>
 <div class="caption">
-    This figure was taken from [Ramdas et al., 2019](https://arxiv.org/abs/1703.06222) and visualizes various partitions and groupings of hypotheses
+    This figure was taken from Ramdas et al., 2019 and visualizes various partitions and groupings of hypotheses
 </div>
 
 
-### Generating data and e-values
+## Generating data and e-values
 
 E-values are heavily context-dependent. Depending on the analyst's level of familiarity with the setting, this may be good or bad. For this simulation, we adapt a modified version of the example in Section (8) in [Wang & Ramdas, 2022](https://academic.oup.com/jrsssb/article/84/3/822/7056146). In essence, the authors propose an e-value approach to detecting cryptocurrencies with positive expected return. There are $$K$$ different cryptocurrencies ("coins") over $$T$$ periods of time.
 
 We are modifying the authors' example as follows: Since we don't have access to their data, we consider two distinct data-generating processes to obtain our year-to-year stock rate of change. First, we consider a scenario where all values are sampled i.i.d. from a truncated normal distribution, $$TN(\mu = 1,\sigma = 1;\text{trunc-null},\infty)$$. This will yield the year-to-year percentage positive change in the price of stock of a specific cryptocurrency, e.g. $$X_{i,j} > 1$$ if a coin's value had increased. Second, we are considering a sequential dependence scenario inspired by the authors' example. Rather than sampling data i.i.d. from a truncated normal with mean 1, we introduce sequential dependence by letting a previous realization become the next period's mean.
 
 $$
-\text{Initialize } X_{k,t_0} = 1. \text{Then,} 
+\text{Initialize} X_{k,t_0} = 1. \text{Then,} 
+$$ \\
+$$
+X_{k,1} \sim TN(\mu = X_{k,t_0}, \sigma = 1; \text{trunc-null}, \infty),
 $$
 $$
-X_{k,1} \sim TN(\mu = X_{k,t_0}, \sigma = 1; \text{trunc-null}, \infty),\, X_{k,2} \sim TN(\mu = X_{k,1}, \sigma = 1; \text{trunc-null}, \infty),\, \ldots,\, 
+X_{k,2} \sim TN(\mu = X_{k,1}, \sigma = 1; \text{trunc-null}, \infty),\, \ldots,\, 
 $$
 $$
 X_{k,T} \sim TN(\mu = X_{k,T-1}, \sigma = 1; \text{trunc-null}, \infty)
@@ -45,10 +48,10 @@ $$
 In the i.i.d scenario, we will calculate e-values as the cumulative product of $$X_{ij}$$: 
 
 $$
-E_{k,t} = \prod_{j=1}^{t} (X_{k,j}), \quad t=1,...,T.
+E_{k,t} = \prod_{j=1}^{t} (X_{k,j}), t=1,...,T.
 $$
 
-This is equivalent to the authors' derivation of e-values, $$E_{k,t} = \prod_{j=1}^{t} (1 - \lambda + \lambda X_{k,j}), \quad t=1,...,T.$$, when setting the investment parameter $$\lambda = 1$$.
+This is equivalent to the authors' derivation of e-values, $$E_{k,t} = \prod_{j=1}^{t} (1 - \lambda + \lambda X_{k,j}), t=1,...,T.$$, when setting the investment parameter $$\lambda = 1$$.
 
 ```{r}
 # Inputs
@@ -137,7 +140,7 @@ We have now constructed our matrix of e-values, both for the iid (`E_iid`) and t
 
 Both ways of constructing e-values have their pros and cons. The `E_iid` e-values that were derived are very sensitive to larger initial quantities. This could be especially valuable to an analyst only interested in controlling FDR on the group-level, i.e. the coin (more on that in the section: `Group-specific p-values`). In contrast, taking the `E_dep` e-values at face value may be valuable if an analyst does care about controlling FDR over multiple partitions, e.g., time. The `E_iid` e-values may be less fit for this finer analysis since the exploding values in later time periods dillute the accurate encoding of information. This discussion illustrates well how important it is to carefully weigh the pros and cons of using e-values vs. p-values. 
 
-### Transforming e-values to p-values
+## Transforming e-values to p-values
 
 A key strength of e-values is their flexibility, i.e. we have many ways to create e-values, we may combine them, and there are multiple ways to transform e-values to p-values. Generally speaking, we can define a transformation of e-values to p-values as a e-to-p calibrator, i.e.
 
@@ -173,7 +176,7 @@ Pvec_dep <- as.vector(P_dep)
 
 Looking at the `P_iid` matrix, we can immediately see a problem with this conversion. If an e-value is less than 1, it yields a p-value over '1', thus yielding invalid probabilities. The solution is to truncate values that exceed 1 at 1, which does give us valid p-values, but we lose information. Intuitively, this could mean that this conversion is better fit for situations where e-values tend to be larger.
 
-### Group-specific p-values
+## Group-specific p-values
 
 An interesting application of e-values in this setting--in line with the authors' example--is to reduce the analysis back to the group-setting, similar to the authors' goal. Taking inspiration from the authors, we can define a group-specific p-value as:
 
@@ -187,7 +190,7 @@ We think this e-value design coupled with group-wise inference could be relevant
 
 We can see that the p-values are indeed lower for the signal (recall that even row indices are classified as signals) coins. The differences in p-values are far more pronounced in the `Pg_iid` vector, owing to the large maximum e-values. The group-wise p-values for the `Pg_dep` case are high, but do not vary as drastically between nulls and signals. 
 
-### An `e-filter` approach
+## An `e-filter` approach
 
 Although the previous finding is promising in terms of conducting inference under dependence, what happens if we are interested controlling for FDR beyond the group-level? That question is why we will explore the `pfilter` function. The `p-filter` is designed to guarantee FDR control across multiple partitions of hypotheses. Our endeavor in exploring the `p-filter` in an e-value framework is to reformulate the computational task of running `e-filter` into a `p-filter` task so that we can use the existing code. 
 
@@ -294,84 +297,3 @@ Discoveries1_dep
 In the `Pvec_dep` case, we see that we have no discoveries at the specified levels of `alpha`. As we saw before, this is because (i) the p-values are already very high and (ii) the additional layer of FDR control (group-specific and overall) takes its toll. Alternatively, we could adjust our `alpha` values. However, it is also important to note that our simulation sample is very small and therefore the sequential dependence relationship has little room to "unfold". In a real-world scenario, the sequential dependence relationship would likely become more pronounced over more time periods.  
 
 All in all, this simulation is an example of how difficult it is to conduct valid inference under dependence. P-values come with a precise probabilistic meaning, but fail under dependence. E-values are heavily context-dependent and can be harmful in the wrong application, but allow for flexibility under dependence. Future research in the replicability and use of of e-values under dependence sounds very intriguing to us after conducting this project. 
-
-
-
-
-
-
-
-
-
-
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
