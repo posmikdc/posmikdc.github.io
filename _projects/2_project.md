@@ -2,7 +2,7 @@
 layout: page
 title: Non-Parametric Conditional Permutation Tests
 description: 
-img: assets/img/3.jpg
+img: assets/img/permutation.png 
 importance: 2
 category: theory
 giscus_comments: true
