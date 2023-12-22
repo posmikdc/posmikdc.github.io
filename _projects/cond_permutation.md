@@ -99,12 +99,21 @@ print(paste0("When comparing proportions and without any multiple testing correc
 
 The results are indicative of the multiple testing issues present in the data. Our null hypothesis is that there is no relationship between pickup origin and late night ridership. We are testing this null hypothesis against 18 alternative hypothesis. With each statistical test, the probability of obtaining false positives increases. Therefore, we decided to obtain a second set of p-values using a conditional permutation test. 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cond_perm_map_prop.png" title="" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This figure visualizes the association between late night ridership and pickup origin (with the proportion test p-values)
+</div>
+
 ## Permutation Test
 
 We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. X || Y |Z, rather than just X || Y as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m). 
 
 $$
-p = \frac{1 + \Sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
+p = \frac{1 + \sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
 $$
 
 As our test statistic, we have chosen a logistic regression model, regressing late_ride ($$Y$$) on pickup community ($$X$$). Moreover, we control by year and temperature ($$Z$$). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector $$b_T$$ and the permuted coefficient vectors $$b_p1, b_p2, ..., b_pm$$. 
@@ -230,6 +239,15 @@ ggplot() +
   labs(title = "Late Night Rides and Neighborhood: Permuted P-Values") +
   theme_minimal()
 ```
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cond_perm_map_perm.png" title="" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This figure visualizes the association between late night ridership and pickup origin (with the proportion test p-values)
+</div>
 
 Overall, both maps tell a story that is not very surprising. As we had hypothesized, Hyde Park is only one of two significant neighborhoods in the South side. The other one is Garfield Ridge, the location of Midway airport. Hyde Park's significance likely has a lot to do with students taking taxis out of Hyde Park late at night. Furthermore, O'Hare airport is strongly significant. This makes sense since we expect a major international airport to have a lot of late night taxi ridership. Lastly, it is interesting to see that the North Side is very significant, e.g., Lincoln Park and Lakeview. We believe this could be associated with the night life and the comparatively wealthy residents. 
 
