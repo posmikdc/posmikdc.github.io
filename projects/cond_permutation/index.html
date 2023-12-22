@@ -40,23 +40,33 @@ prop19_df &lt;- taxi_df %&gt;%
 prop_df &lt;- merge(prop14_df, prop19_df, 
                  by = "pickup_community_area",
                  suffixes = c("_14", "_19"))
-</code></pre> <p>Now, we can perform the proportion test and obtain a vector of p-values.</p> <p>```{r, warning=FALSE}</p> <h1 id="significance-cutoff">Significance Cutoff</h1> <p>alpha = 0.05</p> <h1 id="function-to-calculate-p-values">Function to calculate p-values</h1> <p>pvals_prop &lt;- function(df) { # Initialize an empty vectors to store p-values res &lt;- numeric(nrow(df)) pvals &lt;- numeric(nrow(df)) for (i in 1:nrow(df)) { # Rowwise proportion test res &lt;- prop.test(x = c(df[i,2], df[i,4]), n = c(df[i,3], df[i,5])) # Store the p-value in the res vector pvals[i] &lt;- res$p.value } # Return return(pvals) }</p> <h1 id="p-values">P-values</h1> <p>pvals_prop &lt;- as.data.frame(cbind(prop_df[,1], pvals_prop(prop_df)))</p> <h1 id="histogram">Histogram</h1> <p>hist(pvals_prop[,2])</p> <h1 id="performance-no-correction">Performance: No correction</h1> <p>print(paste0(“When comparing proportions and without any multiple testing correction, “,sum(pvals_prop[,2] &lt; alpha),” out of “,nrow(pvals_prop), “ cases have a p-value under the significance cutoff of “, alpha))</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-The results are indicative of the multiple testing issues present in the data. Our null hypothesis is that there is no relationship between pickup origin and late night ridership. We are testing this null hypothesis against 18 alternative hypothesis. With each statistical test, the probability of obtaining false positives increases. Therefore, we decided to obtain a second set of p-values using a conditional permutation test. 
+</code></pre> <p>Now, we can perform the proportion test and obtain a vector of p-values.</p> <pre><code class="language-{r}"># Significance Cutoff
+alpha = 0.05
 
-## Permutation Test
+# Function to calculate p-values
+pvals_prop &lt;- function(df) {
+  # Initialize an empty vectors to store p-values
+  res &lt;- numeric(nrow(df))
+  pvals &lt;- numeric(nrow(df))
+  for (i in 1:nrow(df)) {
+    # Rowwise proportion test
+    res &lt;- prop.test(x = c(df[i,2], df[i,4]), n = c(df[i,3], df[i,5]))
+    # Store the p-value in the res vector
+    pvals[i] &lt;- res$p.value
+  }
+  # Return
+  return(pvals)
+}
 
-We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. X || Y |Z, rather than just X || Y as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m). 
+# P-values
+pvals_prop &lt;- as.data.frame(cbind(prop_df[,1], pvals_prop(prop_df)))
 
-$$
-p = \frac{1 + \Sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
-$$
+# Histogram
+hist(pvals_prop[,2])
 
-As our test statistic, we have chosen a logistic regression model, regressing late_ride ($$Y$$) on pickup community ($$X$$). Moreover, we control by year and temperature ($$Z$$). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector $$b_T$$ and the permuted coefficient vectors $$b_p1, b_p2, ..., b_pm$$. 
-
-It is noteworthy that computational feasibility prevents us from implementing n!, i.e. $$18! = 6.4023737e+15$$, permutations. Thus, we chose to implement an approximate permutation test with a fixed M large enough to account for a reasonable set of permutations without exceeding a reasonable computational time frame. 
-
-```{r}
-# Number of permutations
+# Performance: No correction
+print(paste0("When comparing proportions and without any multiple testing correction, ",sum(pvals_prop[,2] &lt; alpha)," out of ",nrow(pvals_prop), " cases have a p-value under the significance cutoff of ", alpha))
+</code></pre> <p>The results are indicative of the multiple testing issues present in the data. Our null hypothesis is that there is no relationship between pickup origin and late night ridership. We are testing this null hypothesis against 18 alternative hypothesis. With each statistical test, the probability of obtaining false positives increases. Therefore, we decided to obtain a second set of p-values using a conditional permutation test.</p> <h2 id="permutation-test">Permutation Test</h2> <table> <tbody> <tr> <td>We now apply a conditional permutation test (CPR) as outlined in <a href="https://arxiv.org/pdf/1807.05405.pdf" rel="external nofollow noopener" target="_blank">Berrett et al., 2018</a>. For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. X</td> <td> </td> <td>Y</td> <td>Z, rather than just X</td> <td> </td> <td>Y as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m).</td> </tr> </tbody> </table> \[p = \frac{1 + \Sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}\] <p>As our test statistic, we have chosen a logistic regression model, regressing late_ride (\(Y\)) on pickup community (\(X\)). Moreover, we control by year and temperature (\(Z\)). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector \(b_T\) and the permuted coefficient vectors \(b_p1, b_p2, ..., b_pm\).</p> <p>It is noteworthy that computational feasibility prevents us from implementing n!, i.e. \(18! = 6.4023737e+15\), permutations. Thus, we chose to implement an approximate permutation test with a fixed M large enough to account for a reasonable set of permutations without exceeding a reasonable computational time frame.</p> <pre><code class="language-{r}"># Number of permutations
 M = 250
 
 # Isolate X_T 
@@ -77,7 +87,7 @@ for (i in 1:M) {
 
 # Merge the non-permuted df back
 perm_df &lt;- cbind(perm_X, taxi_df[,2:4])
-</code></pre></div></div> <p>We have obtained a permuted data frame. Let us now turn to the test statistic: A logistic regression model. Note that the logistic regression model only iterates through the <code class="language-plaintext highlighter-rouge">M + 1</code> column vectors of permuted pickup origin. Interestingly, <a href="https://arxiv.org/pdf/1807.05405.pdf" rel="external nofollow noopener" target="_blank">Berrett et al., 2018</a> propose a slightly different fix if Z is categorical. Namely, “there is a simple and well- known fix for this problem: we can group the observations according to their value of Z, and then permute within groups.” We decided against this approach because our logistic regression model accounts for the conditional dependence. Thus, permuting within each group of \(Z\), i.e. within cold and warm months, would be redundant.</p> <pre><code class="language-{r}"># Create an empty matrix to store the coefficients
+</code></pre> <p>We have obtained a permuted data frame. Let us now turn to the test statistic: A logistic regression model. Note that the logistic regression model only iterates through the <code class="language-plaintext highlighter-rouge">M + 1</code> column vectors of permuted pickup origin. Interestingly, <a href="https://arxiv.org/pdf/1807.05405.pdf" rel="external nofollow noopener" target="_blank">Berrett et al., 2018</a> propose a slightly different fix if Z is categorical. Namely, “there is a simple and well- known fix for this problem: we can group the observations according to their value of Z, and then permute within groups.” We decided against this approach because our logistic regression model accounts for the conditional dependence. Thus, permuting within each group of \(Z\), i.e. within cold and warm months, would be redundant.</p> <pre><code class="language-{r}"># Create an empty matrix to store the coefficients
 coeff_matrix &lt;- 
   matrix(NA, nrow = nrow(pvals_prop) - 1 + 3, # -1 comparison dummy; +3 [intercept term + 2 covariates]
          ncol = M + 1)
