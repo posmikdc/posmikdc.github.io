@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Non-Parametric Conditional Permutation Tests
+title: Inference via Conditional Permutation Tests
 description: 
 img: assets/img/permutation.png 
 importance: 2
