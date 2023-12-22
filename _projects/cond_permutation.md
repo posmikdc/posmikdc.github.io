@@ -110,7 +110,7 @@ The results are indicative of the multiple testing issues present in the data. O
 
 ## Permutation Test
 
-We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. X || Y |Z, rather than just X || Y as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m). 
+We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. $$X \indep Y|Z$$, rather than just $$X \indep Y$$ as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m). 
 
 $$
 p = \frac{1 + \sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
