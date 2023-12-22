@@ -4,7 +4,7 @@ title: Multilayer FDR control with e-values
 description:
 img: assets/img/multilayer_fdr.png 
 importance: 1
-category: projects
+category:
 related_publications:
 ---
 
