@@ -10,7 +10,7 @@ giscus_comments: true
 
 ## Introduction 
 
-As members of the UChicago community, we are aware of occasional safety risks present. The University of Chicago's administration has responded to these concerns in multiple ways. One of them is offering students up to 10 free Lyft rides per quarter. This has made us curious whether there is a significant association between neighborhood of origin and late night taxi rides. We hypothesize that certain communities in Chicago, especially Hyde Park, are more strongly associated with late night taxi ridership. In our analysis, we account for data from 2014 and 2019. 
+As members of the UChicago community, we are aware of occasional safety risks present. The University of Chicago's administration has responded to these concerns in multiple ways. One of them is offering students up to 10 free Lyft rides per quarter. This has made us curious whether there is a significant association between neighborhood of origin and late night taxi rides. We hypothesize that certain communities in Chicago, especially Hyde Park, are more strongly associated with late night taxi ridership. In our analysis, we account for data from 2014 and 2019. In the following analysis, we will be testing whether there is a relationship between late night rides and over 60 pickup locations, i.e. neighborhoods in Chicago. This results in a multiple testing problem. We generate p-values via (1) a proportion test and (2) via a conditional permutation test, attempting to correct for multiple testing in the latter.  
 
 ```{r}
 # General wrangling
@@ -103,9 +103,13 @@ The results are indicative of the multiple testing issues present in the data. O
 
 We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. X || Y |Z, rather than just X || Y as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation X^(m). 
 
-As our test statistic, we have chosen a logistic regression model, regressing late_ride (Y) on pickup community (X). Moreover, we control by year and temperature (Z). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector b_T and the permuted coefficient vectors b_p1, b_p2, ..., b_pm. 
+$$
+p = \frac{1 + \Sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
+$$
 
-It is noteworthy that computational feasibility prevents us from implementing n!, i.e. 18! = 6.4023737e+15, permutations. Thus, we chose to implement an approximate permutation test with a fixed M large enough to account for a reasonable set of permutations without exceeding a reasonable computational time frame. 
+As our test statistic, we have chosen a logistic regression model, regressing late_ride ($$Y$$) on pickup community ($$X$$). Moreover, we control by year and temperature ($$Z$$). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector $$b_T$$ and the permuted coefficient vectors $$b_p1, b_p2, ..., b_pm$$. 
+
+It is noteworthy that computational feasibility prevents us from implementing n!, i.e. $$18! = 6.4023737e+15$$, permutations. Thus, we chose to implement an approximate permutation test with a fixed M large enough to account for a reasonable set of permutations without exceeding a reasonable computational time frame. 
 
 ```{r}
 # Number of permutations
@@ -131,7 +135,7 @@ for (i in 1:M) {
 perm_df <- cbind(perm_X, taxi_df[,2:4])
 ```
 
-We have obtained a permuted data frame. Let us now turn to the test statistic: A logistic regression model. Note that the logistic regression model only iterates through the `M + 1` column vectors of permuted pickup origin. Interestingly, [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf) propose a slightly different fix if Z is categorical. Namely, "there is a simple and well- known fix for this problem: we can group the observations according to their value of Z, and then permute within groups." We decided against this approach because our logistic regression model accounts for the conditional dependence. Thus, permuting within each group of Z, i.e. within cold and warm months, would be redundant. 
+We have obtained a permuted data frame. Let us now turn to the test statistic: A logistic regression model. Note that the logistic regression model only iterates through the `M + 1` column vectors of permuted pickup origin. Interestingly, [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf) propose a slightly different fix if Z is categorical. Namely, "there is a simple and well- known fix for this problem: we can group the observations according to their value of Z, and then permute within groups." We decided against this approach because our logistic regression model accounts for the conditional dependence. Thus, permuting within each group of $$Z$$, i.e. within cold and warm months, would be redundant. 
 
 ```{r}
 # Create an empty matrix to store the coefficients
