@@ -2,7 +2,7 @@
 layout: page
 title: Inference via Conditional Permutation Tests
 description: 
-img: assets/img/permutation 
+img: assets/img/permutation.png 
 importance: 2
 category: theory
 giscus_comments: true
