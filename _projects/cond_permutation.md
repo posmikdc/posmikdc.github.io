@@ -68,7 +68,7 @@ prop_df <- merge(prop14_df, prop19_df,
 
 Now, we can perform the proportion test and obtain a vector of p-values. 
 
-```{r, warning=FALSE}
+```{r}
 # Significance Cutoff
 alpha = 0.05
 
