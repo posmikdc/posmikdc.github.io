@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: Multilayer FDR control with e-values
+title: Multilayer FDR control with e-values
+description:
 img: assets/img/multilayer_fdr.png 
 importance: 1
-category: work
+category: projects
 related_publications:
 ---
 
