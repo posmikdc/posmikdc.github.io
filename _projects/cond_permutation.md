@@ -246,7 +246,7 @@ ggplot() +
     </div>
 </div>
 <div class="caption">
-    This figure visualizes the association between late night ridership and pickup origin (with the proportion test p-values)
+    This figure visualizes the association between late night ridership and pickup origin (with the permutation-based p-values)
 </div>
 
 Overall, both maps tell a story that is not very surprising. As we had hypothesized, Hyde Park is only one of two significant neighborhoods in the South side. The other one is Garfield Ridge, the location of Midway airport. Hyde Park's significance likely has a lot to do with students taking taxis out of Hyde Park late at night. Furthermore, O'Hare airport is strongly significant. This makes sense since we expect a major international airport to have a lot of late night taxi ridership. Lastly, it is interesting to see that the North Side is very significant, e.g., Lincoln Park and Lakeview. We believe this could be associated with the night life and the comparatively wealthy residents. 
