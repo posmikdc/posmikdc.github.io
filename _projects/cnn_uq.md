@@ -11,7 +11,7 @@ category: theory
 
 {% if site.data.repositories.github_repos %}
 
-{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
+{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=cnn %} {% endfor %}
 {% endif %}
 
 ## Introduction

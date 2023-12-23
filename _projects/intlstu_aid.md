@@ -2,7 +2,7 @@
 layout: page
 title: Predicting Enrollment with Aid
 description: 
-img: assets/img/1.jpg
+img: assets/img/intlstu.jpg
 importance: 1
 category: applied
 ---
@@ -11,7 +11,7 @@ category: applied
 
 {% if site.data.repositories.github_repos %}
 
-{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
+{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=jsfa2022 %} {% endfor %}
 {% endif %}
 
 **Suggested citation:** Posmik, Daniel C. (2022) "Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach," _Journal of Student Financial Aid, 51(3) , Article 4_.
