@@ -11,7 +11,10 @@ category: theory
 
 [Access Repository](https://github.com/posmikdc/cnn)
 
-{% include repository/repo_trophies.html username=user %}
+{% if site.data.repositories.github_repos %}
+
+{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
+{% endif %}
 
 ## Introduction
 
