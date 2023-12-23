@@ -7,11 +7,14 @@ importance: 3
 category: theory
 ---
 
-## Applying Uncertainty Quantification on a Convolutional Neural Net Algorithm 
+## Repository Link 
 
 {% if site.data.repositories.github_repos %}
-
-{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=cnn %} {% endfor %}
+  {% for repo in site.data.repositories.github_repos %}
+    {% if repo.name == 'cnn' %}
+      {% include repository/repo.html repository=repo %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
 ## Introduction
