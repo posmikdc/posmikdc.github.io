@@ -10,9 +10,13 @@ category: applied
 ## Repository Link
 
 {% if site.data.repositories.github_repos %}
-
-{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=jsfa2022 %} {% endfor %}
+  {% for repo in site.data.repositories.github_repos %}
+    {% if repo.name == "jsfa2022" %}  <!-- Check if the repo name is "jsfa2022" -->
+      {% include repository/repo.html repository=repo %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
+
 
 ## Overview
 
