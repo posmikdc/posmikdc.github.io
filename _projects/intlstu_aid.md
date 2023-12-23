@@ -10,13 +10,9 @@ category: applied
 ## Repository Link
 
 {% if site.data.repositories.github_repos %}
-  {% for repo in site.data.repositories.github_repos %}
-    {% if repo.name == "jsfa2022" %}  <!-- Check if the repo name is "jsfa2022" -->
-      {% include repository/repo.html repository=repo %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
 
+{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
+{% endif %}
 
 ## Overview
 
@@ -144,7 +140,7 @@ Other details, like the functional form of $$\textcolor{orange}{\Lambda}$$ (e.g.
 
 - Consider $$\textcolor{green}{T=0}$$: This Makes $$\textcolor{orange}{\Lambda} = 0$$. This makes the random effects estimator equal to the pooled estimator. This makes sense because zero time periods is analogous to pooling everything together (i.e. we don't differentiate between time periods)
 - Consider $$\textcolor{blue}{\sigma_{\delta}^{2}} = 0$$. This also makes the random effects estimator equal to the pooled estimator. This time, zero variance in the across-group variance means that there is practically no across-group difference. This means that we pool everything across groups -- Ta Da!
-- Consider $$\textcolor{red}{\sigma_{\epsilon}^{2}} = 0$$. Again random effects estimator equals pooled estimator. If there is no variance across either time *and** groups, it follows that there is no variance in **neither** group **nor** variance. We pool again!
+- Consider $$\textcolor{red}{\sigma_{\epsilon}^{2}} = 0$$. Again random effects estimator equals pooled estimator. If there is no variance across either time **and** groups, it follows that there is no variance in **neither** group **nor** variance. We pool again!
 - Putting all this together, it follows that we have a random effects estimator of and only if $$0 < \textcolor{orange}{\Lambda} < 1$$. The edge cases of a random effects estimator, are a pooled estimator and a fixed effects estimator for $${0,1}$$ respectively. 
 
 Phew--good job! If you've read that far, you have a very solid background in pooled, fixed effects, and random effects estimators. Now, let's proceed to the meat of this section: How I used the random effects estimator to estimate correlations within time-invariant settings. 

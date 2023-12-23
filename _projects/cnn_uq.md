@@ -10,11 +10,8 @@ category: theory
 ## Repository Link 
 
 {% if site.data.repositories.github_repos %}
-  {% for repo in site.data.repositories.github_repos %}
-    {% if repo.name == 'cnn' %}
-      {% include repository/repo.html repository=repo %}
-    {% endif %}
-  {% endfor %}
+
+{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
 {% endif %}
 
 ## Introduction
