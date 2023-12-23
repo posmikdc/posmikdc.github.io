@@ -9,8 +9,6 @@ category: theory
 
 ## Applying Uncertainty Quantification on a Convolutional Neural Net Algorithm 
 
-[Access Repository](https://github.com/posmikdc/cnn)
-
 {% if site.data.repositories.github_repos %}
 
 {% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
