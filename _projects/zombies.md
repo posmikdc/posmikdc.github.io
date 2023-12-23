@@ -3,7 +3,7 @@ layout: page
 title: modeling a zombie outbreak
 description:
 img: assets/img/zombies.png 
-importance: 3
+importance: 2
 category: applied
 ---
 
