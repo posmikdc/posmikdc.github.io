@@ -11,6 +11,8 @@ category: theory
 
 [Access Repository](https://github.com/posmikdc/cnn)
 
+{% include repository/repo_trophies.html username=user %}
+
 ## Introduction
 
 Using a Convolutional Neural Net (CNN), I determine whether the pictures are deer, frogs, or trucks. I design a Neural Net that includes three convolutional layers (they pick up on the structure in the picture) and feed the output into dense layers. The classification accuracy is just over 90%. Additionally, I apply Grad CAM to visualize which image structure led to the classification decision. Here is an example using a cat and a dog:
