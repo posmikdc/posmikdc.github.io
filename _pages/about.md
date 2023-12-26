@@ -33,3 +33,6 @@ In my free-time, I am an avid climber, mountaineer, and lover of dogs. If you ar
         {% include figure.html path="assets/img/choji.jpg" title="Petting my friend's dog Choji" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<div class="caption">
+    From left to right: (1) Hiking to Everest Basecamp in Nepal in 2022, (2) Climbing at the Red River Gorge, (3) Petting my friend's dog Choji on a hike in Wisconsin     
+</div>
