@@ -22,7 +22,14 @@ I am currently a non-degree seeking graduate student at the University of Chicag
 
 In my free-time, I am an avid climber, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me.
 
-{% include figure.html path="assets/img/basecamp.jpg" title="Everest Basecamp" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/climbing.jpg" title="Climbing at the Red River Gorge" class="img-fluid rounded z-depth-1" %}
-{% include figure.html path="assets/img/choji.jpg" title="Petting my friend's dog Choji" class="img-fluid rounded z-depth-1" %}
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/basecamp.jpg" title="Everest Basecamp Hike in '22" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/climbing.jpg" title="Climbing at the Red River Gorge" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/choji.jpg" title="Petting my friend's dog Choji" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
