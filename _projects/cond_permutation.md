@@ -5,10 +5,13 @@ description:
 img: assets/img/permutation.png 
 importance: 2
 category: theory
-giscus_comments: true
 ---
 
 ## Introduction 
+
+In hypothesis testing, knowledge about the null distribution is critical. If the null distribution is misspecified, inference may be biased and invalid. In multiple testing scenarios, this vulnerability to misspecification persists. That is why we explore a non-parametric permutation-based approach to multiple testing using conditional permutation tests. The conditional permutation tests--as opposed to a canonical permutation strategy--incorporate covariates into the inferential procedure. 
+
+## Data and Working Example 
 
 As members of the UChicago community, we are aware of occasional safety risks present. The University of Chicago's administration has responded to these concerns in multiple ways. One of them is offering students up to 10 free Lyft rides per quarter. This has made us curious whether there is a significant association between neighborhood of origin and late night taxi rides. We hypothesize that certain communities in Chicago, especially Hyde Park, are more strongly associated with late night taxi ridership. In our analysis, we account for data from 2014 and 2019. In the following analysis, we will be testing whether there is a relationship between late night rides and over 60 pickup locations, i.e. neighborhoods in Chicago. This results in a multiple testing problem. We generate p-values via (1) a proportion test and (2) via a conditional permutation test, attempting to correct for multiple testing in the latter.  
 
@@ -110,7 +113,7 @@ The results are indicative of the multiple testing issues present in the data. O
 
 ## Permutation Test
 
-We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. $$ X \text{independent from} Y|Z $$, rather than just $$ X \text{independent from} Y $$ as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation $$X^{(m)}$$. 
+We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. $$X \text{independent from} Y \vert Z$$, rather than just $$X \text{independent from} Y$$ as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation $$X^{(m)}$$. 
 
 $$
 p = \frac{1 + \sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
