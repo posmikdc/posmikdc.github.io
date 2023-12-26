@@ -20,4 +20,9 @@ My name is Daniel Posmik [(He/Him/His)](https://inclusion.uchicago.edu/lgbtq-stu
 
 I am currently a non-degree seeking graduate student at the University of Chicago. Starting January 2024, I am fortunate to work with [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/) on various topics in causal inference methodology, i.e. causal mediation analysis. I previously worked at the [University of Chicago's Energy and Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment). 
 
-In my free-time, I am an avid climber, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me. 
+In my free-time, I am an avid climber, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me.
+
+{% include figure.html path="assets/img/basecamp.jpg" title="Everest Basecamp" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/climbing.jpg" title="Climbing at the Red River Gorge" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/choji.jpg" title="Petting my friend's dog Choji" class="img-fluid rounded z-depth-1" %}
+
