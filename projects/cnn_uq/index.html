@@ -1,1 +1,415 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>CNNs and Uncertainty Quantification | Daniel C. Posmik</title> <meta name="author" content="Daniel C. Posmik"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?19f3075a2d19613090fe9e16b564e1fe" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://posmikdc.github.io/projects/cnn_uq/"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?e74e74bf055e5729d44a7d031a5ca6a5" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?96d6b3e1c3604aca8b6134c7afdd5db6"></script> <script src="/assets/js/dark_mode.js?9b17307bb950ffa2e34be0227f53558f"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Daniel </span>C. Posmik</a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about</a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications</a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects</a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv</a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5"> <div class="post"> <header class="post-header"> <h1 class="post-title">CNNs and Uncertainty Quantification</h1> <p class="post-description"></p> </header> <article> <h2 id="repository-link">Repository Link</h2> <div class="repo p-2 text-center"> <a href="https://github.com/posmikdc/cnn" rel="external nofollow noopener" target="_blank"> <img class="repo-img-light w-100" alt="posmikdc/cnn" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=cnn&amp;theme=default&amp;show_owner=false"> <img class="repo-img-dark w-100" alt="posmikdc/cnn" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=cnn&amp;theme=dark&amp;show_owner=false"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/posmikdc/jsfa2022" rel="external nofollow noopener" target="_blank"> <img class="repo-img-light w-100" alt="posmikdc/jsfa2022" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=jsfa2022&amp;theme=default&amp;show_owner=false"> <img class="repo-img-dark w-100" alt="posmikdc/jsfa2022" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=jsfa2022&amp;theme=dark&amp;show_owner=false"> </a> </div> <h2 id="introduction">Introduction</h2> <p>Using a Convolutional Neural Net (CNN), I determine whether the pictures are deer, frogs, or trucks. I design a Neural Net that includes three convolutional layers (they pick up on the structure in the picture) and feed the output into dense layers. The classification accuracy is just over 90%. Additionally, I apply Grad CAM to visualize which image structure led to the classification decision. Here is an example using a cat and a dog:</p> <p><img src="https://miro.medium.com/max/1186/0*D4FATkIeWp61o9zo.jpg" alt="ChartChat1-3"></p> <h2 id="mc-dropout">MC Dropout</h2> <p>Next, I use Monte Carlo (MC) Dropout to construct confidence intervals around my decisions (→ “Uncertainty Quantification). MC Dropout varies the Neural Net architecture to induce some variation into the classification decision, then we can measure the resulting deviation as a confidence interval. If the Neural Net architecture varie and the classification decisions stay the same, we have constructed a great (→ robust) model and the confidence intervals will be slim. Here is a visual explanation:</p> <p><img src="https://docs.aws.amazon.com/prescriptive-guidance/latest/ml-quantifying-uncertainty/images/mc-dropout.png" alt="ChartChat1-3"></p> <h2 id="variational-neural-network">Variational Neural Network</h2> <p>These are the results for my model, where Cat. 1 - 3 correspond to Frogs, Deer, and Trucks respectively. The confidence intervals are reasonable, and especially slim for Cat. 3 (→ Trucks) which means the CNN does an outstanding job at classifying trucks. This makes sense seeing that Trucks are not animals and look considerably less alike than Deer and Frogs (who at least share rudimentary facial features).</p> <p>Lastly, I apply a second technique to quantify uncertainty: A variational neural network (VNN). A VNN introduces a hidden layer “Z” which adds uncertainty to the weights assigned during <em>regular</em> backpropagation. The results indicate similar performance as the MC Dropout.</p> <p><img src="https://miro.medium.com/max/848/1*6uuK7GpIbfTb-0chqFwXXw.png" alt="ChartChat1-3"></p> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2023 Daniel C. Posmik. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script> <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script> <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script> <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script> <script defer src="/assets/js/copy_code.js?07b8786bab9b4abe90d10e61f7d12ff7" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>CNNs and Uncertainty Quantification | Daniel C. Posmik</title> <meta name="author" content="Daniel C. Posmik"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?19f3075a2d19613090fe9e16b564e1fe" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://posmikdc.github.io/projects/cnn_uq/"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?e74e74bf055e5729d44a7d031a5ca6a5" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?96d6b3e1c3604aca8b6134c7afdd5db6"></script> <script src="/assets/js/dark_mode.js?9b17307bb950ffa2e34be0227f53558f"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Daniel </span>C. Posmik</a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about</a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications</a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects</a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv</a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5"> <div class="post"> <header class="post-header"> <h1 class="post-title">CNNs and Uncertainty Quantification</h1> <p class="post-description"></p> </header> <article> <h2 id="repository-link">Repository Link</h2> <div class="repo p-2 text-center"> <a href="https://github.com/posmikdc/cnn" rel="external nofollow noopener" target="_blank"> <img class="repo-img-light w-100" alt="posmikdc/cnn" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=cnn&amp;theme=default&amp;show_owner=false"> <img class="repo-img-dark w-100" alt="posmikdc/cnn" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=cnn&amp;theme=dark&amp;show_owner=false"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/posmikdc/jsfa2022" rel="external nofollow noopener" target="_blank"> <img class="repo-img-light w-100" alt="posmikdc/jsfa2022" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=jsfa2022&amp;theme=default&amp;show_owner=false"> <img class="repo-img-dark w-100" alt="posmikdc/jsfa2022" src="https://github-readme-stats.vercel.app/api/pin/?username=posmikdc&amp;repo=jsfa2022&amp;theme=dark&amp;show_owner=false"> </a> </div> <h2 id="introduction">Introduction</h2> <p>Using a Convolutional Neural Net (CNN), I determine whether the pictures are deer, frogs, or trucks. I design a Neural Net that includes three convolutional layers (they pick up on the structure in the picture) and feed the output into dense layers. The classification accuracy is just over 90%. Additionally, I apply Grad CAM to visualize which image structure led to the classification decision. Here is an example using a cat and a dog:</p> <p><img src="https://miro.medium.com/max/1186/0*D4FATkIeWp61o9zo.jpg" alt="ChartChat1-3"></p> <h2 id="convolutional-neural-network-cnn">Convolutional Neural Network (CNN)</h2> <p>First, we build a CNN. We choose a batch size of 128, and specify that we are dealing with 3 classes. The CNN’s goal is to classify deers (0), frogs (1), and trucks (2) with an accuracy of &gt;90%. The dimensions of the pictures are 32x32 and we use a softmax activation function in the final output layer for multicategorical classification. Moreover, note that these are color images. We use a validation split of 0.2.</p> <pre><code class="language-{r}"># Data Preparation
+batch_size &lt;- 128
+num_classes &lt;- 3 #How many classes are we dealing with?
+epochs &lt;- 12
+
+# Input image dimensions
+img_rows &lt;- 32 #use dim()
+img_cols &lt;- 32 #use dim()
+input_shape &lt;- c(img_rows, img_cols, 3) #3 because rbg image
+
+#Build model and summary
+model &lt;- keras_model_sequential() %&gt;%
+  layer_conv_2d(filters = 32, kernel_size = c(3,3), activation = 'relu',
+                input_shape = input_shape) %&gt;% 
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;% 
+  layer_conv_2d(filters = 64, kernel_size = c(3,3), activation = 'relu') %&gt;% 
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;% 
+  layer_conv_2d(filters = 128, kernel_size = c(3,3), activation = 'relu', name='Conv_last') %&gt;% 
+  #Specifically named the last convolutional layer for Grad CAM later!
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;% 
+  layer_flatten() %&gt;% 
+  layer_dense(units = 128, activation = 'relu') %&gt;% 
+  layer_dropout(rate = 0.3) %&gt;% 
+  layer_dense(units = 128, activation = 'relu') %&gt;% 
+  layer_dropout(rate = 0.3) %&gt;% 
+  layer_dense(units = num_classes, activation = 'softmax') #Classification: Softmax
+
+summary(model)
+
+#Model compiling
+model %&gt;% compile(
+  loss = 'categorical_crossentropy',
+  optimizer = 'adam',
+  metrics = c('accuracy')
+)
+
+#set up early stopping
+callback_specs=list(callback_early_stopping(monitor = "val_loss", min_delta = 0, patience = 10,
+                                            verbose = 0, mode = "auto"),
+                    callback_model_checkpoint(filepath='best_model.hdf5',save_freq='epoch' ,save_best_only = TRUE)
+)
+
+#running optimization
+history &lt;- model %&gt;% fit(
+  x_train, y_train, 
+  epochs = 10, batch_size = 128, 
+  validation_split = 0.2,
+  callbacks = callback_specs
+)
+
+#load the saved best model
+model_best = load_model_hdf5('best_model.hdf5',compile=FALSE)
+
+#compute the predicted values
+p_hat_test = model_best %&gt;% predict(x_test)
+y_hat_test = apply(p_hat_test,1,which.max)
+
+#evaluate the model performance
+model %&gt;% evaluate(x_test, y_test) #Achieved accuracy greater than 85%
+
+y_true = apply(y_test,1,which.max)
+sum(y_hat_test==y_true)/length(y_true)
+
+#multi-class ROC
+library(pROC)
+multiclass.roc(y_true,y_hat_test) #Great performance with AUC being over 90%
+</code></pre> <p>We achieve a model accuracy of over 90%. Moreover, the Area Under the Curve (AUC) on the multi-class ROC is over 90% - indicating great classification performance. It means that - on average - this model is 90% more reliable when classifying than a random process.</p> <h2 id="grad-cam">Grad CAM</h2> <p>Next, we conduct Grad CAM on three interesting images in the data set. Grad CAM enables us to highlight the areas/structures in an image that led to a classification decision.</p> <pre><code class="language-{r}">test_case_to_look &lt;- 284
+number_of_filters &lt;- 64 #number of filers for hte last layer
+
+#Define the functions
+
+last_conv_layer &lt;- model_best %&gt;% get_layer("Conv_last") 
+#Note: "conv2d_1" part need to be changed if the name of the layer is changed!
+#Keras changes the names of layers every time the model is defined. 
+
+target_output &lt;- model_best$output[, which.max(y_test[test_case_to_look,])] 
+
+grads &lt;- K$gradients(target_output, last_conv_layer$output)[[1]]
+
+pooled_grads &lt;- K$mean(grads, axis = c(1L, 2L))
+compute_them &lt;- K$`function`(list(model_best$input), 
+                             list(pooled_grads, last_conv_layer$output[1,,,])) 
+
+#The input image has to be a 4D array
+x_test_example &lt;- x_test[test_case_to_look,,,]
+dim(x_test_example) &lt;- c(1,dim(x_test_example))
+
+#True Label
+which.max(y_test[test_case_to_look,])
+#Original Label
+which.max(model_best %&gt;% predict(x_test_example))
+
+#Computing the importance and gradient map for each filter
+c(pooled_grads_value, conv_layer_output_value) %&lt;-% compute_them(list(x_test_example))
+
+#Computing the Activation Map
+for (i in 1:number_of_filters) {
+  conv_layer_output_value[,,i] &lt;- 
+    conv_layer_output_value[,,i] * pooled_grads_value[[i]] 
+}
+heatmap &lt;- apply(conv_layer_output_value, c(1,2), mean)
+
+#Normalizing the activation map
+heatmap &lt;- pmax(heatmap, 0) 
+heatmap &lt;- (heatmap - min(heatmap))/ (max(heatmap)-min(heatmap)) 
+
+#Create Heatmap
+#install.packages("imager",dependencies = TRUE)
+library(imager)
+heatmap=1-heatmap
+heatmap_array &lt;- array(heatmap,dim=c(13,13,1,3))
+heatmap_array &lt;- array(resize(heatmap_array,32,32),dim=c(32,32,4))
+heatmap_array[,,4] &lt;- 0.4
+
+x_test_draw &lt;- array(1,dim=c(32,32,4))
+x_test_draw[,,4] &lt;-1
+x_test_draw[,,1:3] &lt;- x_test[test_case_to_look,,,]
+
+par(mfrow=c(1,2))
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+rasterImage(heatmap_array, 0, 0, 1, 1)
+</code></pre> <p>We can look at a frog.</p> <pre><code class="language-{r}">#Test Case: Frog 
+test_case_to_look &lt;- 101
+number_of_filters &lt;- 64 #number of filers for hte last layer
+
+#Define the functions
+last_conv_layer &lt;- model_best %&gt;% get_layer("Conv_last") 
+#Note: "conv2d_1" part need to be changed if the name of the layer is changed!
+#Keras changes the names of layers every time the model is defined. 
+
+target_output &lt;- model_best$output[, which.max(y_test[test_case_to_look,])] 
+
+grads &lt;- K$gradients(target_output, last_conv_layer$output)[[1]]
+
+pooled_grads &lt;- K$mean(grads, axis = c(1L, 2L))
+compute_them &lt;- K$`function`(list(model_best$input), 
+                             list(pooled_grads, last_conv_layer$output[1,,,])) 
+
+#The input image has to be a 4D array
+x_test_example &lt;- x_test[test_case_to_look,,,]
+dim(x_test_example) &lt;- c(1,dim(x_test_example))
+
+#True Label
+which.max(y_test[test_case_to_look,])
+#Original Label
+which.max(model_best %&gt;% predict(x_test_example))
+
+#Computing the importance and gradient map for each filter
+c(pooled_grads_value, conv_layer_output_value) %&lt;-% compute_them(list(x_test_example))
+
+#Computing the Activation Map
+for (i in 1:number_of_filters) {
+  conv_layer_output_value[,,i] &lt;- 
+    conv_layer_output_value[,,i] * pooled_grads_value[[i]] 
+}
+
+heatmap &lt;- apply(conv_layer_output_value, c(1,2), mean)
+
+#Normalizing the activation map
+heatmap &lt;- pmax(heatmap, 0) 
+heatmap &lt;- (heatmap - min(heatmap))/ (max(heatmap)-min(heatmap)) 
+
+#Create Heatmap
+#install.packages("imager",dependencies = TRUE)
+library(imager)
+heatmap=1-heatmap
+heatmap_array &lt;- array(heatmap,dim=c(13,13,1,3))
+heatmap_array &lt;- array(resize(heatmap_array,32,32),dim=c(32,32,4))
+heatmap_array[,,4] &lt;- 0.4
+
+x_test_draw &lt;- array(1,dim=c(32,32,4))
+x_test_draw[,,4] &lt;-1
+x_test_draw[,,1:3] &lt;- x_test[test_case_to_look,,,]
+
+par(mfrow=c(1,2))
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+rasterImage(heatmap_array, 0, 0, 1, 1)
+</code></pre> <p>We can also look at a truck.</p> <pre><code class="language-{r}">#Test Case: Truck 
+test_case_to_look &lt;- 56
+number_of_filters &lt;- 64 #number of filers for hte last layer
+
+#Define the functions
+
+last_conv_layer &lt;- model_best %&gt;% get_layer("Conv_last") 
+#Note: "conv2d_1" part need to be changed if the name of the layer is changed!
+#Keras changes the names of layers every time the model is defined. 
+
+target_output &lt;- model_best$output[, which.max(y_test[test_case_to_look,])] 
+
+grads &lt;- K$gradients(target_output, last_conv_layer$output)[[1]]
+
+pooled_grads &lt;- K$mean(grads, axis = c(1L, 2L))
+compute_them &lt;- K$`function`(list(model_best$input), 
+                             list(pooled_grads, last_conv_layer$output[1,,,])) 
+
+#The input image has to be a 4D array
+x_test_example &lt;- x_test[test_case_to_look,,,]
+dim(x_test_example) &lt;- c(1,dim(x_test_example))
+
+#True Label
+which.max(y_test[test_case_to_look,])
+#Original Label
+which.max(model_best %&gt;% predict(x_test_example))
+
+#Computing the importance and gradient map for each filter
+c(pooled_grads_value, conv_layer_output_value) %&lt;-% compute_them(list(x_test_example))
+
+#Computing the Activation Map
+for (i in 1:number_of_filters) {
+  conv_layer_output_value[,,i] &lt;- 
+    conv_layer_output_value[,,i] * pooled_grads_value[[i]] 
+}
+heatmap &lt;- apply(conv_layer_output_value, c(1,2), mean)
+
+#Normalizing the activation map
+heatmap &lt;- pmax(heatmap, 0) 
+heatmap &lt;- (heatmap - min(heatmap))/ (max(heatmap)-min(heatmap)) 
+
+#Create Heatmap
+#install.packages("imager",dependencies = TRUE)
+library(imager)
+heatmap=1-heatmap
+heatmap_array &lt;- array(heatmap,dim=c(13,13,1,3))
+heatmap_array &lt;- array(resize(heatmap_array,32,32),dim=c(32,32,4))
+heatmap_array[,,4] &lt;- 0.4
+
+x_test_draw &lt;- array(1,dim=c(32,32,4))
+x_test_draw[,,4] &lt;-1
+x_test_draw[,,1:3] &lt;- x_test[test_case_to_look,,,]
+
+par(mfrow=c(1,2))
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+plot.new()
+rasterImage(x_test_draw,   0, 0, 1, 1)
+rasterImage(heatmap_array, 0, 0, 1, 1)
+</code></pre> <p>The first case is a deer. We can see that executing Grad CAM overlays three colors, red-blue-green, over the picture. These correspond to the critical regions (that led to the classification decision) for each color. In this case, unsurprisingly, we can see that the ears and the slim face are important image structures. This trends can be seen in all three colors, particularly on the left side of the face. The second case is a frog. We can see that the green color highlights the forg;s forehead, specifically the region around its eye. This makes sense since that is a feature that is fairly unique to the animal. We can also see that the frog’s back leg is highlighted. The third case is a truck. Immediately, a distinct absence of color where the windows are can be noticed. There is color surrounding the front window, yet there is little to none in it. Likely, a defining feature of the truck is its geometric structures, such as a rectangular window. All in all, we can see that Grad CAM offers an interesting perspective into a model that is often regarded as a black box. It intuitively presents the structures it relied on to make its classification decision.</p> <h2 id="mc-dropout-on-cnn">MC Dropout on CNN</h2> <p>Now, we consider the CNN from section 2 again. MC Dropout enables us to quantify uncertainty in the model’s classification process. Due to limited computing power and time constraints, both the complexity and the samples had to be drastically reduced. MC Dropout implies performing multiple forward passes in a Neural Network, exploiting varying configurations of model architecture to reflect uncertainty in the model’s estimations. In our CNN, we embed the dropout layers into the CNN.</p> <p><img src="https://docs.aws.amazon.com/prescriptive-guidance/latest/ml-quantifying-uncertainty/images/mc-dropout.png" alt="ChartChat1-3"></p> <pre><code class="language-{r}">#Data Prep
+cat('x_train_shape:', dim(x_train), '\n')
+cat(nrow(x_train), 'train samples\n')
+cat(nrow(x_test), 'test samples\n')
+
+# Setting up tuning parameters
+DropoutRate &lt;- 0.05
+tau &lt;- 0.5
+
+keep_prob &lt;- 1-DropoutRate
+n_train &lt;- nrow(x_train)
+penalty_weight &lt;- keep_prob/(2*tau* n_train)
+penalty_intercept &lt;- 1/(2*tau* n_train)
+
+#Setting up drouput from the beginning
+dropout_1 &lt;- layer_dropout(rate = DropoutRate)
+dropout_2 &lt;- layer_dropout(rate = DropoutRate)
+
+inputs = layer_input(shape = input_shape)
+
+# Define model
+output &lt;- inputs %&gt;%
+  layer_conv_2d(filters = 32, kernel_size = c(3,3), activation = 'relu') %&gt;%
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;%
+  layer_conv_2d(filters = 64, kernel_size = c(3,3), activation = 'relu') %&gt;%
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;%
+  layer_conv_2d(filters = 128, kernel_size = c(3,3), activation = 'relu') %&gt;%
+  layer_max_pooling_2d(pool_size = c(2, 2)) %&gt;%
+  layer_flatten() %&gt;%
+  layer_dense(units = 128, activation = 'relu',
+              kernel_regularizer=regularizer_l2(penalty_weight),
+              bias_regularizer=regularizer_l2(penalty_intercept)) %&gt;%
+  dropout_1(training=TRUE) %&gt;%
+  layer_dense(units = 128, activation = 'relu',
+              kernel_regularizer=regularizer_l2(penalty_weight),
+              bias_regularizer=regularizer_l2(penalty_intercept)) %&gt;%
+  dropout_2(training=TRUE) %&gt;%
+  layer_dense(units = num_classes, activation = 'softmax')
+
+model &lt;- keras_model(inputs, output)
+summary(model)
+
+#specify optimizer, loss function, metrics
+model %&gt;% compile(
+  loss = 'categorical_crossentropy',
+  optimizer = 'adam',
+  metrics = c('accuracy')
+)
+
+#set up early stopping
+callback_specs=list(callback_early_stopping(monitor = "val_loss", min_delta = 0, patience = 5,
+                                            verbose = 0, mode = "auto"),
+                    callback_model_checkpoint(filepath='best_model.hdf5',save_freq='epoch' ,save_best_only = TRUE)
+)
+
+#running optimization
+history &lt;- model %&gt;% fit(
+  x_train, y_train,
+  epochs = 11, batch_size = 128,
+  validation_split = 0.2,
+  callbacks = callback_specs
+)
+
+#load the saved best model
+model_best = load_model_hdf5('best_model.hdf5',compile=FALSE)
+
+#prediction via mcdropout sampling
+mc.sample=300 #adjusted to 300 because data are too large
+testPredict=array(NA,dim=c(nrow(x_test),3,mc.sample))
+
+for(i in 1:mc.sample){
+  testPredict[,,i]=model_best %&gt;% 
+  predict(x_test)
+}
+
+#the true lables
+y_true = apply(y_test,1,which.max)
+
+#now each time you compute the predicted values, the results will be slightly different ...
+p_hat_test = model_best %&gt;% predict(x_test)
+y_hat_test = apply(p_hat_test,1,which.max)
+
+#visualizations for the three categories (Distributions via Boxplot)
+mc_plot &lt;- t(testPredict[1,,])
+colnames(mc_plot) &lt;- c("Category 1", "Category 2", "Category 3")
+
+boxplot(mc_plot)
+</code></pre> <p>The results show the prediction probability by category (Frogs, Deer, and Trucks). A higher mean corresponds to a higher probability that the model will choose correctly. An ideal result would be close to 1, poor performance would be closer to zero. Anything beyond 33% in this case would be doing worse than a random guess. Using MC Dropout, we can see that the probability of correctly guessing the first category is about 80%. There are outliers below 80%. This excellent performance is contrasted starkly by the other two categories. Cat. 2 is just below 20% and Cat. 3 is at about 0%. All in all, this indicates excellent performance as Cat. 1 classification is very high!</p> <h2 id="vnn">VNN</h2> <p>Lastly, we use another approach to quantifying uncertainty: A variational neural network (VNN). A VNN relies on architecture that introduces a random layer (Latent layer “Z”) into the model, enabling the capture of uncertainty.</p> <p><img src="https://miro.medium.com/max/848/1*6uuK7GpIbfTb-0chqFwXXw.png" alt="ChartChat1-3"></p> <pre><code class="language-{r}">if (tensorflow::tf$executing_eagerly())
+  tensorflow::tf$compat$v1$disable_eager_execution()
+
+# Parameters
+batch_size &lt;- 100L
+latent_dim &lt;- 3L
+intermediate_dim &lt;- 64L
+epochs &lt;- 20L
+epsilon_std &lt;- 1.0
+num_units &lt;- num_classes
+
+# Model definition
+x &lt;- layer_input(shape = input_shape)
+h &lt;- x %&gt;% layer_conv_2d(filters = 32, kernel_size = c(3,3), activation = "relu") %&gt;%
+  layer_max_pooling_2d(pool_size = c(2,2)) %&gt;%
+  layer_flatten %&gt;%
+  layer_dense(units = 128, activation = 'relu')
+z_mean &lt;- layer_dense(h, latent_dim)
+z_log_var &lt;- layer_dense(h, latent_dim)
+
+sampling &lt;- function(arg){
+  z_mean &lt;- arg[, 1:(latent_dim)]
+  z_log_var &lt;- arg[, (latent_dim + 1):(2 * latent_dim)]
+  
+  epsilon &lt;- k_random_normal(
+    shape = c(k_shape(z_mean)[[1]]), 
+    mean=0.,
+    stddev=epsilon_std
+  )
+  
+  z_mean + k_exp(z_log_var/2)*epsilon
+}
+
+z &lt;- layer_concatenate(list(z_mean, z_log_var)) %&gt;%   
+  layer_lambda(sampling)
+
+#decoder from Z to Y
+decoder_h &lt;- layer_dense(units = intermediate_dim, activation = "relu")
+decoder_p &lt;- layer_dense(units = num_units, activation = "softmax")
+h_decoded &lt;- decoder_h(z)
+y_decoded_p &lt;- decoder_p(h_decoded)
+
+# we instantiate these layers separately so as to reuse them later
+# end-to-end variational model
+vnn &lt;- keras_model(x, y_decoded_p)
+
+# encoder, from inputs to latent space
+encoder &lt;- keras_model(x, z_mean)
+
+vnn_loss &lt;- function(x, x_decoded_mean){
+  cat_loss &lt;- loss_categorical_crossentropy(x, x_decoded_mean)
+  kl_loss &lt;- -0.5*k_mean(1 + z_log_var - k_square(z_mean) - k_exp(z_log_var), axis = -1L)
+  cat_loss + kl_loss
+}
+
+vnn %&gt;% 
+  compile(optimizer = "adam", loss = vnn_loss)
+
+# Model training
+vnn %&gt;% fit(
+  x_train, y_train, 
+  shuffle = TRUE, 
+  epochs = epochs, 
+  batch_size = batch_size, 
+  validation_data = list(x_test, y_test)
+)
+
+summary(vnn)
+
+# Visualizations for the three categories (Distributions via Boxplot)
+library(ggplot2)
+library(dplyr)
+
+x_test_decoded&lt;-array(NA,dim=c(nrow(x_test),3,10))
+for(i in 1:10){
+  x_test_decoded[,,i] &lt;-predict(vnn, x_test)
+}
+
+prob_to_plot&lt;-t(x_test_decoded[134,,])
+colnames(prob_to_plot) &lt;- c("Category 1", "Category 2", "Category 3")
+boxplot(prob_to_plot)
+
+prob_to_plot&lt;-t(x_test_decoded[5,,])
+colnames(prob_to_plot) &lt;- c("Category 1", "Category 2", "Category 3")
+boxplot(prob_to_plot)
+</code></pre> <p>For analysis, we consider two test cases. Both show that within this VNN it is much more likely that categories are incorrectly classified. In both cases, all three categories hover around 33% which indicates poorer classification performance. The distribution of predicted probabilities remains fairly constant across categories.</p> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2023 Daniel C. Posmik. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script> <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script> <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script> <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script> <script defer src="/assets/js/copy_code.js?07b8786bab9b4abe90d10e61f7d12ff7" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
