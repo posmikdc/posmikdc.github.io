@@ -198,7 +198,7 @@ rasterImage(heatmap_array, 0, 0, 1, 1)
 ```
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/cnn_uq_gradcam.png " title="Grad CAM applied to a headshot of a deer" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/gradcam_deer.png " title="Grad CAM applied to a headshot of a deer" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -268,6 +268,14 @@ plot.new()
 rasterImage(x_test_draw,   0, 0, 1, 1)
 rasterImage(heatmap_array, 0, 0, 1, 1)
 ```
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/gradcam_frog.png " title="Grad CAM applied to a headshot of a frog" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Figure from own analysis. 
+</div>
 
 We can also look at a truck. 
 
@@ -333,6 +341,15 @@ rasterImage(x_test_draw,   0, 0, 1, 1)
 rasterImage(heatmap_array, 0, 0, 1, 1)
 ```
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/gradcam_truck.png " title="Grad CAM applied to a picture of a truck" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Figure from own analysis. 
+</div>
+
 The first case is a deer. We can see that executing Grad CAM overlays three colors, red-blue-green, over the picture. These correspond to the critical regions (that led to the classification decision) for each color. In this case, unsurprisingly, we can see that the ears and the slim face are important image structures. This trends can be seen in all three colors, particularly on the left side of the face. The second case is a frog. We can see that the green color highlights the forg;s forehead, specifically the region around its eye. This makes sense since that is a feature that is fairly unique to the animal. We can also see that the frog's back leg is highlighted. The third case is a truck. Immediately, a distinct absence of color where the windows are can be noticed. There is color surrounding the front window, yet there is little to none in it. Likely, a defining feature of the truck is its geometric structures, such as a rectangular window. All in all, we can see that Grad CAM offers an interesting perspective into a model that is often regarded as a black box. It intuitively presents the structures it relied on to make its classification decision. 
 
 ## MC Dropout on CNN
@@ -390,7 +407,32 @@ output <- inputs %>%
 
 model <- keras_model(inputs, output)
 summary(model)
+```
 
+| Layer (type)           | Output Shape           | Param #  |
+|------------------------ |------------------------|----------|
+| input_1 (InputLayer)   | (None, 32, 32, 3)      | 0        |
+| conv2d_4 (Conv2D)      | (None, 30, 30, 32)     | 896      |
+| max_pooling2d_5        | (None, 15, 15, 32)     | 0        |
+| (MaxPooling2D)         |                        |          |
+| conv2d_3 (Conv2D)      | (None, 13, 13, 64)     | 18,496   |
+| max_pooling2d_4        | (None, 6, 6, 64)       | 0        |
+| (MaxPooling2D)         |                        |          |
+| conv2d_2 (Conv2D)      | (None, 4, 4, 128)      | 73,856   |
+| max_pooling2d_3        | (None, 2, 2, 128)      | 0        |
+| (MaxPooling2D)         |                        |          |
+| flatten_1 (Flatten)    | (None, 512)            | 0        |
+| dense_5 (Dense)        | (None, 128)            | 65,664   |
+| dropout_2 (Dropout)    |                        |          |
+| dense_4 (Dense)        | (None, 128)            | 16,512   |
+| dropout_3 (Dropout)    |                        |          |
+| dense_3 (Dense)        | (None, 3)              | 387      |
+
+**Total params:** 175,811  
+**Trainable params:** 175,811  
+**Non-trainable params:** 0  
+
+```{r}
 #specify optimizer, loss function, metrics
 model %>% compile(
   loss = 'categorical_crossentropy',
@@ -437,6 +479,15 @@ colnames(mc_plot) <- c("Category 1", "Category 2", "Category 3")
 
 boxplot(mc_plot)
 ```
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mc_performance.png " title="Category-wise Performance of MC Dropout" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Figure from own analysis. 
+</div>
 
 The results show the prediction probability by category (Frogs, Deer, and Trucks). A higher mean corresponds to a higher probability that the model will choose correctly. An ideal result would be close to 1, poor performance would be closer to zero. Anything beyond 33% in this case would be doing worse than a random guess. Using MC Dropout, we can see that the probability of correctly guessing the first category is about 80%. There are outliers below 80%. This excellent performance is contrasted starkly by the other two categories. Cat. 2 is just below 20% and Cat. 3 is at about 0%. All in all, this indicates excellent performance as Cat. 1 classification is very high!
 
@@ -522,7 +573,27 @@ vnn %>% fit(
 )
 
 summary(vnn)
+```
 
+| Layer (type)            | Output Shape         | Param #  | Connected to                     |
+|------------------------- |----------------------|----------|----------------------------------|
+| input_2 (InputLayer)    | (None, 32, 32, 3)    | 0        |                                  |
+| conv2d_5 (Conv2D)        | (None, 30, 30, 32)   | 896      |                                  |
+| max_pooling2d_6 (MaxPooling2D) | (None, 15, 15, 32)   | 0        | [] ['input_2[0][0]'] ['conv2d_5[0][0]'] |
+| flatten_2 (Flatten)      | (None, 7200)         | 0        | ['max_pooling2d_6[0][0]']        |
+| dense_6 (Dense)          | (None, 128)          | 921,728  | ['flatten_2[0][0]']              |
+| dense_7 (Dense)          | (None, 3)            | 387      | ['dense_6[0][0]']                |
+| dense_8 (Dense)          | (None, 3)            | 387      | ['dense_6[0][0]']                |
+| concatenate (Concatenate)| (None, 6)            | 0        | ['dense_7[0][0]', 'dense_8[0][0]'] |
+| lambda (Lambda)          | (None, 32, 32, 3)    | 256      | ['concatenate[0][0]']           |
+| dense_9 (Dense)          | (None, 64)           | 195      | ['lambda[0][0]']                |
+| dense_10 (Dense)         | (None, 3)            | 195      | ['dense_9[0][0]']               |
+
+**Total params:** 923,849  
+**Trainable params:** 923,849  
+**Non-trainable params:** 0
+
+```{r}
 # Visualizations for the three categories (Distributions via Boxplot)
 library(ggplot2)
 library(dplyr)
@@ -540,6 +611,15 @@ prob_to_plot<-t(x_test_decoded[5,,])
 colnames(prob_to_plot) <- c("Category 1", "Category 2", "Category 3")
 boxplot(prob_to_plot)
 ```
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/vnn_performance.png " title="Category-wise Performance of VNN" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Figure from own analysis. 
+</div>
 
 For analysis, we consider two test cases. Both show that within this VNN it is much more likely that categories are incorrectly classified. In both cases, all three categories hover around 33% which indicates poorer classification performance. The distribution of predicted probabilities remains fairly constant across categories. 
 
