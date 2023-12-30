@@ -1,6 +1,6 @@
 ---
 layout: page
-title: modeling a zombie outbreak
+title: Modeling a Zombie Outbreak
 description:
 img: assets/img/zombies.png 
 importance: 2
@@ -11,12 +11,16 @@ category: applied
 
 What would you do in the doomsday scenario? Well I know what I would do, sit down and mathematically model the outbreak (probably not the best course of action I reckon, but oh well ...). For this project, I extend the work of [Munz et al. (2009)](https://loe.org/images/content/091023/Zombie%20Publication.pdf). I simulate how changing certain parameters affect system stability and the outbreak.
 
+- Final Presentation: 
+
 <a href="https://github.com/posmikdc/zombie/blob/main/MATH3006%20Final%20Project.pdf" target="_blank">
     <img src="https://blogs.mathworks.com/images/pick/Sean/mainZombie/mainZombie_02.png" 
     alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
 </a>
 
 ## Set up ODEs
+
+First, we set up the parameters. Leaning on [Munz et al. (2009)](https://loe.org/images/content/091023/Zombie%20Publication.pdf), we focus on extensions and modifications of the popular `SZR` model. 
 
 ```{m}
 %Math Modeling, Zombie Outbreak
@@ -60,7 +64,10 @@ t = 0:dt:T;
 %Assume: Short period of time
 m = 0;
 delta = 0;
+```
+As a first step, we can set up a SZR model and solve. 
 
+```{m}
 %ODE
 Sprime = m - (beta*S*Z) - (delta*S);
 Zprime = (beta*S*Z) + (zeta*R) - (alpha*S*Z);
@@ -129,8 +136,11 @@ ylabel('Population');
 legend('Suscepties','Zombies','Removed')
 title('Change in SZR Popluation');
 axis([0, T, 0, Npop])
+```
 
+Second, we can consider the "Infected class", extending the `SZR` model to the `SIZR` model. 
 
+```{m}
 %% Part 2: SIZR Model
 clear all; close all; clc;
 
@@ -254,7 +264,12 @@ ylabel('Population');
 legend('Suscepties','Infected','Zombies','Removed')
 title('Change in SIZR Popluation');
 axis([0, T, 0, Npop])
+```
 
+Hooray--humanity has developed a cure for the zombification. Now, we consider a `SIZR` model where treatment exists. 
+
+
+```{m}
 %% Part 3: SIZR Model with treatment
 clear all; close all; clc;
 
@@ -379,7 +394,11 @@ ylabel('Population');
 legend('Suscepties','Infected','Zombies','Removed')
 title('Change in SIZR Popluation');
 axis([0, T, 0, Npop])
+```
 
+Finally, we can consider a last class of people, the "Quarantined" population class. Now, we have arrived at our final extension, the `SIZRQ` model. 
+
+```{m}
 %% Part 4: SIZRQ Model
 clear all; close all; clc;
 
@@ -469,3 +488,5 @@ legend('Suscepties','Infected','Zombies','Removed','Quarantine')
 title('Change in SIZRQ Popluation');
 axis([0, T, 0, Npop])
 ```
+
+Our results show that treatment is the only effective way to defeat the zombies. 
