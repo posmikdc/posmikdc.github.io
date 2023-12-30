@@ -7,7 +7,9 @@ importance: 2
 category: applied
 ---
 
-## Repository Link 
+```{r}
+knitr::include_url('https://timmastny.rbind.io/slides/first_presentation#1')
+```
 
 ## Zombies are here! Mathematical models for the Doomsday Scenario
 
