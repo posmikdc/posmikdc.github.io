@@ -116,7 +116,7 @@ The results are indicative of the multiple testing issues present in the data. O
 We now apply a conditional permutation test (CPR) as outlined in [Berrett et al., 2018](https://arxiv.org/pdf/1807.05405.pdf). For us, applying a conditional permutation test is especially useful because we can now test conditional independence, i.e. $$X$$ independent from $$Y \vert Z$$, rather than just $$X$$ independent from $$Y$$ as in the previous proportion test. This allows us to account for relevant influence from confounders. Additionally, the conditional permutation test allows us to construct a sampling distribution, rather than assuming it, by resampling combinations of X for each permutation $$X^{(m)}$$. 
 
 $$
-p = \frac{1 + \sum_{m = 1}^{M} \mathbb{1}\{T(\mathbb{X}^{(m)}, \mathbb{Y}, \mathbb{Z}) \geq T(\mathbb{X}, \mathbb{Y}, \mathbb{Z})\}}{1 + M}
+p = \frac{1 + \sum_{m = 1}^{M} \mathbb{1}\{T(\mathbf{X}^{(m)}, \mathbf{Y}, \mathbf{Z}) \geq T(\mathbf{X}, \mathbf{Y}, \mathbf{Z})\}}{1 + M}
 $$
 
 As our test statistic, we have chosen a logistic regression model, regressing late_ride ($$Y$$) on pickup community ($$X$$). Moreover, we control by year and temperature ($$Z$$). We chose a logistic regression model because the dependent variable is binary. Our test statistics, being a function of our data, will output coefficients. We call the non-permuted coefficient vector $$b_T$$ and the permuted coefficient vectors $$b_{p_1}, b_{p_2}, ..., b_{p_m}$$. 
