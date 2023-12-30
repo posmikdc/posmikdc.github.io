@@ -25,7 +25,13 @@ First, we set up the parameters. Leaning on [Munz et al. (2009)](https://loe.org
 ```{m}
 %Math Modeling, Zombie Outbreak
 clear all; close all; clc;
+```
 
+## Part 1: The SZR Model 
+
+As a first step, we can set up a `SZR` model and solve. 
+
+```{m}
 %% Part 1: SZR Model
 clear all; close all; clc;
 
@@ -64,10 +70,7 @@ t = 0:dt:T;
 %Assume: Short period of time
 m = 0;
 delta = 0;
-```
-As a first step, we can set up a SZR model and solve. 
 
-```{m}
 %ODE
 Sprime = m - (beta*S*Z) - (delta*S);
 Zprime = (beta*S*Z) + (zeta*R) - (alpha*S*Z);
@@ -137,6 +140,8 @@ legend('Suscepties','Zombies','Removed')
 title('Change in SZR Popluation');
 axis([0, T, 0, Npop])
 ```
+
+## Part 2: The SIZR Model 
 
 Second, we can consider the "Infected class", extending the `SZR` model to the `SIZR` model. 
 
@@ -266,8 +271,9 @@ title('Change in SIZR Popluation');
 axis([0, T, 0, Npop])
 ```
 
-Hooray--humanity has developed a cure for the zombification. Now, we consider a `SIZR` model where treatment exists. 
+## Part 3: The SIZR* Model 
 
+Hooray--humanity has developed a cure for the zombification. Now, we consider a `SIZR*` model where treatment exists. 
 
 ```{m}
 %% Part 3: SIZR Model with treatment
@@ -395,6 +401,8 @@ legend('Suscepties','Infected','Zombies','Removed')
 title('Change in SIZR Popluation');
 axis([0, T, 0, Npop])
 ```
+
+## Part 4: The SIZRQ Model 
 
 Finally, we can consider a last class of people, the "Quarantined" population class. Now, we have arrived at our final extension, the `SIZRQ` model. 
 
