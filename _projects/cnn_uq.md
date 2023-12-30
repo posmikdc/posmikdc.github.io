@@ -56,8 +56,6 @@ model <- keras_model_sequential() %>%
 summary(model)
 ```
 
-## Model Summary
-
 | Layer (type)                | Output Shape           | Param #  |
 |----------------------------- |------------------------|----------|
 | conv2d_1 (Conv2D)            | (None, 30, 30, 32)     | 896      |
