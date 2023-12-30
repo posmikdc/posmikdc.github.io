@@ -46,7 +46,31 @@ model <- keras_model_sequential() %>%
   layer_dense(units = num_classes, activation = 'softmax') #Classification: Softmax
 
 summary(model)
+```
 
+## Model Summary
+
+| Layer (type)                | Output Shape           | Param #  |
+|----------------------------- |------------------------|----------|
+| conv2d_1 (Conv2D)            | (None, 30, 30, 32)     | 896      |
+| max_pooling2d_2 (MaxPooling2D)| (None, 15, 15, 32)     | 0        |
+| conv2d (Conv2D)              | (None, 13, 13, 64)     | 18,496   |
+| max_pooling2d_1 (MaxPooling2D)| (None, 6, 6, 64)       | 0        |
+| Conv_last (Conv2D)           | (None, 4, 4, 128)      | 73,856   |
+| max_pooling2d (MaxPooling2D) | (None, 2, 2, 128)      | 0        |
+| flatten                      | (None, 512)            | 0        |
+| dense_2 (Dense)              | (None, 128)            | 65,664   |
+| dropout_1 (Dropout)          |                        |          |
+| dense_1 (Dense)              | (None, 128)            | 16,512   |
+| dropout (Dropout)            |                        |          |
+| dense (Dense)                | (None, 3)              | 387      |
+
+**Total params:** 175,811  
+**Trainable params:** 175,811  
+**Non-trainable params:** 0
+
+
+```{r}
 #Model compiling
 model %>% compile(
   loss = 'categorical_crossentropy',
@@ -77,7 +101,15 @@ y_hat_test = apply(p_hat_test,1,which.max)
 
 #evaluate the model performance
 model %>% evaluate(x_test, y_test) #Achieved accuracy greater than 85%
+```
 
+| Metric      | Value      |
+|-------------|------------|
+| Loss        | 0.2684333  |
+| Accuracy    | 0.9006667  |
+
+
+```{r}
 y_true = apply(y_test,1,which.max)
 sum(y_hat_test==y_true)/length(y_true)
 
@@ -86,7 +118,11 @@ library(pROC)
 multiclass.roc(y_true,y_hat_test) #Great performance with AUC being over 90%
 ```
 
-We achieve a model accuracy of over 90%. Moreover, the Area Under the Curve (AUC) on the multi-class ROC is over 90% - indicating great classification performance. It means that - on average - this model is 90% more reliable when classifying than a random process. 
+| **Parameter**                           | **Value**             |
+|-----------------------------------------|-----------------------|
+| Multi-class AUC (Area Under the Curve)  | 0.9336                |
+
+We achieve a model accuracy of over 90%. Moreover, the Area Under the Curve (AUC) on the multi-class ROC is over 90% - indicating great classification performance. It means that--on average--this model is 90% more reliable when classifying than a random process. 
 
 ## Grad CAM
 
@@ -152,8 +188,16 @@ plot.new()
 rasterImage(x_test_draw,   0, 0, 1, 1)
 rasterImage(heatmap_array, 0, 0, 1, 1)
 ```
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cnn_uq_gradcam.png " title="Grad CAM applied to a headshot of a deer" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Figure from own analysis. 
+</div>
 
-We can look at a frog. 
+We can also look at a frog. 
 
 ```{r}
 #Test Case: Frog 
@@ -287,7 +331,14 @@ The first case is a deer. We can see that executing Grad CAM overlays three colo
 
 Now, we consider the CNN from section 2 again. MC Dropout enables us to quantify uncertainty in the model's classification process. Due to limited computing power and time constraints, both the complexity and the samples had to be drastically reduced. MC Dropout implies performing multiple forward passes in a Neural Network, exploiting varying configurations of model architecture to reflect uncertainty in the model's estimations. In our CNN, we embed the dropout layers into the CNN.  
 
-![ChartChat1-3](https://docs.aws.amazon.com/prescriptive-guidance/latest/ml-quantifying-uncertainty/images/mc-dropout.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mc_dropout.png " title="Visualization of MC Dropout" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Source: https://docs.aws.amazon.com/prescriptive-guidance/latest/ml-quantifying-uncertainty/images/mc-dropout.png
+</div>
 
 ```{r}
 #Data Prep
@@ -385,7 +436,14 @@ The results show the prediction probability by category (Frogs, Deer, and Trucks
 
 Lastly, we use another approach to quantifying uncertainty: A variational neural network (VNN). A VNN relies on architecture that introduces a random layer (Latent layer "Z") into the model, enabling the capture of uncertainty. 
 
-![ChartChat1-3](https://miro.medium.com/max/848/1*6uuK7GpIbfTb-0chqFwXXw.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/vnn.png " title="Visualization of a Variational Neural Net" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+   Source: https://miro.medium.com/max/848/1*6uuK7GpIbfTb-0chqFwXXw.png
+</div>
 
 ```{r}
 if (tensorflow::tf$executing_eagerly())
