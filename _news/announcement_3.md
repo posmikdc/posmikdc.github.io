@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I am starting a research assistantship in January! 
+title: I have started a Graduate Research Assistantship! 
 date: 2024-01-15 16:11:00-0400
 inline: false
 related_posts: false
