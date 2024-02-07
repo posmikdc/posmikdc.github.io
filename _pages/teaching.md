@@ -9,8 +9,8 @@ nav_order: 4
 
 At the University of Chicago, I am a teaching assistant (TA) for the following course:
 
-**[Causal Inference (ECMA31360)](https://voices.uchicago.edu/qrmeth/courses/#31360)** | Graduate, Spring 2024 
+**[Econometrics (ECON21020)](http://collegecatalog.uchicago.edu/thecollege/economics/)** | Spring 2024 
 
 - **Instructor**: Prof. Melissa Tartari (mtartari@uchicago.edu) 
 - **Syllabus**: _TBD_
-- **Overview:** This course reviews modern causal inference techniques and their applications in business and economics. The course covers the treatment-control comparison estimator, regression adjustment, matching (on covariates and propensity score), difference in differences (canonical and with staggered treatment), panel data methods, regression discontinuity design (sharp and fuzzy), instrumental variables and local average treatment effect (LATE) estimator. At different points during the course, we mention how machine learning (ML) techniques have recently been used to enrich the classical methods. The course involves programming (R language) and working with data. Students are expected to have a solid background in statistics (working knowledge of R and familiarity with RStudio) and econometrics. _Prerequisite(s): ECON 21020/21030._
+- **Description:** Required of students who are majoring in economics; those students are encouraged to meet this requirement by the end of their third year. This course covers the single and multiple linear regression model, the associated distribution theory, and testing procedures; corrections for heteroskedasticity, autocorrelation, and simultaneous equations; and other extensions as time permits. Students also apply the techniques to a variety of data sets using PCs.
