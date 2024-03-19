@@ -15,8 +15,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-
-My name is Daniel Posmik [(He/Him/His)](https://inclusion.uchicago.edu/lgbtq-student-life/lgbtq-resources/#collapse4) and I am an aspiring Biostatistician. I am interested in assumption-lean causal inference under complex interference patterns. On the theoretical side, I am excited to study networks, graphical models, and high-dimensional inference. My goal is to tie my interests into dynamic treatment regimes, particularly at the interface of climate and public health. My vision is to help policymakers make more informed decisions in response to environmental degradation and global warming.   
+My name is Daniel Posmik [(He/Him/His)](https://inclusion.uchicago.edu/lgbtq-student-life/lgbtq-resources/#collapse4) and I am an aspiring Biostatistician. My interest is at the intersection of causal inference and networks, specifically making causal inference under network interference more robust and assumption-lean. On the theoretical side, I am excited to study stochastic dependence, learning on graphs, and nonparametric methods. As a Biostatistician, my goal is to apply my work at the interface of public health and climate. My vision is to help policymakers make more informed decisions in response to environmental degradation and global warming.   
 
 I am currently a graduate student at the University of Chicago and a graduate research assistant for [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/). Our work has focused on the validity of instrumental variables in sequential and multi-site treatment settings. Previously, I worked at the intersection of causal inference and machine learning at the [UChicago Energy and Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment). 
 
