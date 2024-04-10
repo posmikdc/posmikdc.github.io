@@ -11,5 +11,5 @@ children:
       permalink: /teaching/
     - title: cv 
       newtab: true
-      permalink: /Users/posmikdc/Documents/assets/cv/cv.pdf 
+      redirect_to: https://github.com/posmikdc/cv/blob/main/cv.pdf 
 ---
