@@ -5,11 +5,11 @@ nav: true
 nav_order: 4
 dropdown: true
 children: 
-    - title: Repositories
+    - title: repositories
       permalink: /repositories/
-    - title: Teaching
+    - title: teaching
       permalink: /teaching/
-    - title: CV
+    - title: cv 
       newtab: true
       permalink: /Users/posmikdc/Documents/assets/cv/cv.pdf 
 ---
