@@ -9,7 +9,8 @@ children:
       permalink: /repositories/
     - title: teaching
       permalink: /teaching/
-    - title: cv 
+    - title: cv
+      layout: redirected
       newtab: true
       redirect_to: https://github.com/posmikdc/cv/blob/main/cv.pdf 
 ---
