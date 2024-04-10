@@ -1,5 +1,7 @@
 ---
-layout: redirected
+layout: cv
 permalink: /cv/
-redirect_to: https://github.com/posmikdc/cv/blob/main/cv.pdf
+title: CV
+nav: false
+cv_pdf: CV.pdf
 ---

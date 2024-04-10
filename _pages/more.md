@@ -1,6 +1,6 @@
 ---
 layout: page
-title: more
+title: More
 nav: true
 nav_order: 4
 dropdown: true
@@ -9,8 +9,7 @@ children:
       permalink: /repositories/
     - title: teaching
       permalink: /teaching/
-    - title: cv
-      layout: redirected
+    - title: cv 
       newtab: true
-      redirect_to: https://github.com/posmikdc/cv/blob/main/cv.pdf 
+      permalink: /assets/pdf/cv.pdf
 ---
