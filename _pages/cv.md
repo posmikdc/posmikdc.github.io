@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV
+title: cv 
 nav: false
-cv_pdf: /Users/posmikdc/Documents/assets/cv/cv.pdf 
+redirect_to: https://github.com/posmikdc/cv/blob/main/cv.pdf
 ---
