@@ -1,7 +1,7 @@
 ---
-layout: page
-title: cv 
-redirect: https://github.com/posmikdc/cv/blob/main/cv.pdf 
+layout: cv
+permalink: /cv/
+title: cv
 nav: false 
+cv_pdf: example_pdf.pdf
 ---
-
