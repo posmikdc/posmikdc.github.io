@@ -18,10 +18,6 @@ nav: false
 
 ---
 
-{% endfor %}
-{% endif %}
-{% endif %}
-
 ## GitHub Repositories
 
 {% if site.data.repositories.github_repos %}
