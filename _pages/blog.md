@@ -15,3 +15,4 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
+Blog will appear here. 
