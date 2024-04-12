@@ -9,6 +9,4 @@ children:
       permalink: /blog/ 
     - title: teaching
       permalink: /teaching/
-    - title: repositories
-      permalink: /repositories/
 ---
