@@ -24,7 +24,9 @@ My interest is at the intersection of causal inference and networks, specificall
 
 I was previously a graduate student at the University of Chicago and a graduate research assistant for [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/), working on the validity of instrumental variables in sequential and multi-site treatment settings. Before that, I worked at the intersection of causal inference and machine learning at the [UChicago Energy and Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment). 
 
-In my free-time, I am an avid outdoorsman, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu. 
+In my free-time, I am an avid outdoorsman, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu.
+
+You can access my most updated CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf). 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
