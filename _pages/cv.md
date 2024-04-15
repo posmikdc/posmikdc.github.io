@@ -1,6 +1,8 @@
 ---
-layout: redirected
+layout: default
 permalink: /cv/
-nav: true 
-redirect_to: https://your.pdf.location
+title: cv
+nav: true
+nav_order: 3
+redirect_to: /assets/pdf/your-cv.pdf
 ---
