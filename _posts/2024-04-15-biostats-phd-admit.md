@@ -11,26 +11,34 @@ toc:
   sidebar: left
 ---
 
-I just finished my application cycle for Ph.D. programs in Biostatistics and I am lucky enough to begin my doctoral studies at Brown in the fall. When I was preparing my application, I profited greatly from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student; paying this advice forward is important to me. If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional applicant, I would be happy to glance over your work (availability permitting).
+I just finished my application cycle for Ph.D. programs in Biostatistics and I am thrilled to join Brown's Biostatistics department in the fall. 
 
-## Some Preliminary Disclaimers 
+When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I want to pay their advice forward to the next generation of aspiring Biostatisticians. 
 
-Please note that this post represents my opinions (subjective!) alone. My situation--more on that later--is quite different from a _traditional_ applicant (more on that later). In that sense, please take all opinions with a grain of salt. When stating/ recalling facts, I will do so to the best of my availability. Please reach out to me if you find any factual inaccuracies. 
+If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional applicant, I would be happy to glance over your work (availability permitting).
+
+**A Preliminary Disclaimer:** 
+
+Please note that this post represents my opinions alone. My situation and circumstances may be quite different from you. In that sense, please take all opinions with a grain of salt. When stating/ recalling facts, I will do so to the best of my availability. Please [reach out to me](mailto:posmikdc@gmail.com) if you find any inaccuracies. 
 
 ## My Background
 
-I think it is important to start out describing my background. I graduated from a large public state school with degrees in Economics, Business Analytics, and a minor in Mathematics. Before that, I completed an Associate's degree in Business Administration at a community college within the University of Cincinnati system. After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab at the University of Chicago](https://urbanlabs.uchicago.edu/labs/energy-environment), I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very technical (i.e. I wasapplying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. After 8 months, I decided to leave the E&E Lab and start my studies as a non-degree-seeking graduate student at the University of Chicago. The rationale was that I needed some more rigorous coursework (e.g., analysis) under my belt to be a competitive candidate for Ph.D. programs in (Bio-)Statistics.
+I graduated from a large public state school with degrees in Economics, Business Analytics, and a minor in Mathematics. Before that, I completed an Associate's degree in Business Administration at a community college within the University of Cincinnati system. 
 
-If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf) (Note that this is my current CV, not the one I submitted). 
+After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab at the University of Chicago](https://urbanlabs.uchicago.edu/labs/energy-environment), I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very technical (i.e. I wasapplying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. 
+
+After 8 months, I decided to leave the E&E Lab and start my studies as a non-degree-seeking graduate student at the University of Chicago. The rationale was that I needed some more rigorous coursework (e.g., analysis) under my belt to be a competitive candidate for Ph.D. programs in (Bio-)Statistics.
+
+If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf) (Note that this is my current CV, not the one I submitted. I share the CV I submitted later in this post.). 
 
 ### My Interests and Goals
 
-Though I feel like this changes by the minute, I am broadly interested in the intersection of causal inference and statistical network analysis. In particular, I care about causal inference in high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. Ultimately, I would like to apply my work at the interface of public health and climate, helping policymakers make more informed decisions in response to environmental disasters and global warming.
+I am interested in the intersection of causal inference and statistical network analysis. In particular, I care about causal inference in high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. Ultimately, I would like to apply my work at the interface of public health and climate, helping policymakers make more informed decisions in response to environmental disasters and global warming.
 
 With respect to my post-Ph.D. goals, I think the following breakdown (currently) describes it best. 
 
 - A career in academia: 55%
-- A career in a public/ think tank role: 43%
+- A research career in a public/ think tank role: 43%
 - A career in private industry: 2%
 
 ### Why Biostatistics
@@ -76,6 +84,14 @@ I went into this application cycle with the mentality of "giving it a shot". I w
 
 I applied to the UChicago Data Science Ph.D. mostly because I was currently working at the UChicago Data Science Institute and I knew a good amount of the faculty. I applied to Masters only in Canada because (1) I was eligible for German government funding in Canada but not the U.S., (2) For personal reasons, and (3) Overall cost and quality of life. Additionally, I was a finalist for a full-ride leadership-based scholarship at McGill. 
 
+You may also notice that I didn't apply to many other top-ranked departments. This is because I either found little research fit or (this was mostly the case) I didn't want to live wherever the school was located. I encourage you to not sweep this factor under the rug. 
+
+I also had an internal ranking. The following factors were most important to me: 
+
+- Substantial research in causal inference and networks: `#1 JHU`, `#2 Brown`, `#3 Yale` `#4 UW`
+- Location and access to nature: `#1 UW`, `#2 Berkeley` 
+- Research fit with individual faculty: `#1 JHU, Berkeley, Brown, Yale`, `#2 Harvard` 
+
 ### Preparation
 
 First things first, yes I did take the GRE. I performed slighly above average, but nothing outstanding. Overall, I found the GRE to be a colossal waste of time, money, and energy. If I could redo my application cycle, I would have opted to not take it and scratch the programs that require it off my list. After all, with all the evidence that is out there showing how the GRE puts marginalized students at a disadvantage, merely requiring the GRE is a huge red flag for me. 
@@ -99,17 +115,22 @@ Please note that I update this repo every time I make local changes. If you have
 
 ### My Application Materials 
 
-I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via email. 
+I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via [email](mailto:posmikdc@gmail.com). 
 
-<object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/brown-biostatistics-phd.pdf" width="600" height="800" type="application/pdf"></object>
+<object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/brown-biostatistics-phd.pdf" width="580" height="800" type="application/pdf"></object>
 
 Now, I will provide some commentary and context on these application materials. I was extremely lucky to have various faculty and mentors give me feedback but please don't treat these materials as the gold standard. They worked for me and my situation. 
 
-- CV (_Education, Coursework, Awards_): I initially had grades on there as well (Nothing worse than an A-) but a professor recommended against that because the "A-" could catch somebody's eye early. I know how nitpicky this sounds but I am just echo'ing here
-- CV (_Research Experience and Community Service_): Some folks said that it is a lot of detail but that was on purpose. My research experience was my strongest asset and I wanted to highlight everything I did. 
-- CV (_Presentations, Professional Service, Skills_): Even having sections for this is unusual for Ph.D. applicants because we are usually too young to have anything substantial here. I had some space to spare so I decided to include some presentations and talks I had given. One more thing: Don't forget to include your programming skills! 
-- SOP (_General_): My SOP's were identical across all programs I applied to with the exception of two paragraphs (Of course I adjusted the name of school in the other paragraphs lol). Generally though, I wanted to lead with an eye-catcher (the bolded sentence in the first paragraph). Then, I wanted to get addressing my key weakness (the lack of rigorous coursework) out of the way (that's paragraph #2). Then, up to paragraph #6, I describe my research experience and how it led to my current interest. 
-- SOP (_Paragraphs #7 and #8_): I use paragraph #7 to talk about how my interests tie into the program. A lot of times, people will put this paragraph as the second paragraph which may work very well with your application. The last paragraph is similar to seventh paragraph but focuses more on research community, centers, and personal fit. 
+### CV
+
+- **Education, Coursework, Awards**: I initially had grades on there as well (Nothing worse than an A-) but a professor recommended against that because the "A-" could catch somebody's eye early. I know how nitpicky this sounds but I am just echo'ing here
+- **Research Experience and Community Service**: Some folks said that it is a lot of detail but that was on purpose. My research experience was my strongest asset and I wanted to highlight everything I did. 
+- **Presentations, Professional Service, Skills**: Even having sections for this is unusual for Ph.D. applicants because we are usually too young to have anything substantial here. I had some space to spare so I decided to include some presentations and talks I had given. One more thing: Don't forget to include your programming skills! 
+
+### SOP and Personal Statement
+
+- **General**: My SOP's were identical across all programs I applied to with the exception of two paragraphs (Of course I adjusted the name of school in the other paragraphs lol). Generally though, I wanted to lead with an eye-catcher (the bolded sentence in the first paragraph). Then, I wanted to get addressing my key weakness (the lack of rigorous coursework) out of the way (that's paragraph #2). Then, up to paragraph #6, I describe my research experience and how it led to my current interest. 
+- **Paragraphs #7 and #8**: I use paragraph #7 to talk about how my interests tie into the program. A lot of times, people will put this paragraph as the second paragraph which may work very well with your application. The last paragraph is similar to seventh paragraph but focuses more on research community, centers, and personal fit. 
 - Personal Statement: This was identical across all schools I applied to.
 
 Overall, I think that being very neat and submitting "pretty" application materials definitely helped my case. I would recommend that to anyone, i.e. even just using LaTeX to format your materials may make a good impression (Though this is certainly not mandatory). 
@@ -172,13 +193,19 @@ As you can see, it was a tough cycle. I was very surprised by some rejections an
 
 ### Visit Day and Decisions
 
+## My Decision
+
 Brown ended up flying me out and organizing a visit day. I felt like it was a particularly strong match because of the cordial and down-to-earth department culture. I was at the time still debating between McGill and Brown--since I could have (with an almost certain guarantee) transferred into the Ph.D. program after Year #1. 
 
 My decision ended up coming down to: 
 
-- Research fit 
-- Stipend and benefits (Brown pays one of the highest stipends I have ever heard of) 
-- Departmental/ Culture fit 
+- Research fit: I can work at the intersection of causal inference and networks.  
+- Stipend and benefits: Brown pays one of the highest stipends I have heard of.  
+- Departmental/ Culture fit: The department seems amazing and my gut is telling me I will be very happy there. 
+
+## Funding
+
+Funding is an important thing to consider, as well. Brown was amongst the top-paying (if not _the_ top-paying) schools out of my list. In my admissions offer, alongside health insurance and full tuition, I am guaranteed a stipend of $49,012 and a one-time first-year supplement stipend of $1,750. When evaluating funding decisions, it does sometimes help looking at whether the school's graduate students are unionized (Brown's are).  
 
 ## Final Thoughts
 
