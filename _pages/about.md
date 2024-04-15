@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 My name is Daniel Posmik [(He/Him/His)](https://lgbtq.brown.edu/lgbtqbrown/pronouns-brown#:~:text=What%20pronouns%20are%20available%20in,fae%2Ffaer%2Ffaers) and I am an incoming doctoral student at the Department of Biostatistics at Brown University. 
 
-My interest lies at the intersection of causal inference and statistical network analysis. In particular, I am concerned with high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. As a Biostatistician, my goal is to apply my work at the interface of public health and climate. My vision is to help policymakers make more informed decisions in response to environmental disasters and global warming.   
+My interest lies at the intersection of causal inference and statistical network analysis. In particular, I am concerned with causal inference in high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. As a Biostatistician, my goal is to apply my work at the interface of public health and climate. My vision is to help policymakers make more informed decisions in response to environmental disasters and global warming.   
 
 I was previously a graduate student at the University of Chicago and a graduate research assistant for [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/), working on the validity of instrumental variables in sequential and multi-site treatment settings. Before that, I worked at the intersection of causal inference and machine learning at the [UChicago Energy and Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment). 
 
