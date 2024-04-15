@@ -4,7 +4,7 @@ title: Applying to Biostatistics Ph.D. Programs
 date: 2023-04-25 10:14:00-0400
 description: My experience applying to Ph.D. programs in Biostatistics 
 tags: biostatistics admission phd 
-categories: sample-posts
+categories: 
 giscus_comments: true
 related_posts: false
 toc:
@@ -101,7 +101,7 @@ Please note that I update this repo every time I make local changes. If you have
 
 I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via email. 
 
-<embed src="/Users/posmikdc/Documents/assets/posmikdc.github.io/assets/pdf/brown-biostatistics-phd.pdf" type="application/pdf" width="100%" height="600px" />
+<object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/brown-biostatistics-phd.pdf" width="800" height="1000" type="application/pdf"></object>
 
 Now, I will provide some commentary and context on these application materials. I was extremely lucky to have various faculty and mentors give me feedback but please don't treat these materials as the gold standard. They worked for me and my situation. 
 
