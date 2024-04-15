@@ -90,7 +90,9 @@ I also had an internal ranking. The following factors were most important to me:
 
 - Substantial research in causal inference and networks: `#1 JHU`, `#2 Brown`, `#3 Yale` `#4 UW`
 - Location and access to nature: `#1 UW`, `#2 Berkeley` 
-- Research fit with individual faculty: `#1 JHU, Berkeley, Brown, Yale`, `#2 Harvard` 
+- Research fit with individual faculty: `#1 JHU, Berkeley, Brown, Yale`, `#2 Harvard`
+
+One more thing: Since I was ready to get rejected from all programs, I was working towards being a more competitive applicant during the next cycle while I was applying. In that sense, I had started a graduate research assistantship at UChicago in causal inference methodology and started TA'ing. This forward-looking approach really helped me mentally since I kept reassuring myself that I can just try again next year. 
 
 ### Preparation
 
