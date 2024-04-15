@@ -78,6 +78,8 @@ I applied to the UChicago Data Science Ph.D. mostly because I was currently work
 
 ### Preparation
 
+First things first, yes I did take the GRE. I performed slighly above average, but nothing outstanding. Overall, I found the GRE to be a colossal waste of time, money, and energy. If I could redo my application cycle, I would have opted to not take it and scratch the programs that require it off my list. After all, with all the evidence that is out there showing how the GRE puts marginalized students at a disadvantage, merely requiring the GRE is a huge red flag for me. 
+
 I started preparing my application materials very early, around June, because I knew I had a ton of time over the summer (as opposed to zero time in the fall). One thing I did that made life significantly easier for myself and my recommenders is to start a GitHub repository called `grad-apps` that contained everything. At the time I was writing my applications, this repo was public, so all my recommenderes and mentors could have easy access to it. It is now private (and will remain private) for privacy reasons. 
 
 That being said, I am happy to share how I set it up. Here is content of the `README.md` file: 
@@ -97,19 +99,89 @@ Please note that I update this repo every time I make local changes. If you have
 
 ### My Application Materials 
 
-I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's.
+I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via email. 
 
 <embed src="/Users/posmikdc/Documents/assets/posmikdc.github.io/assets/pdf/brown-biostatistics-phd.pdf" type="application/pdf" width="100%" height="600px" />
 
-Now, I will provide some commentary on these application materials: 
+Now, I will provide some commentary and context on these application materials. I was extremely lucky to have various faculty and mentors give me feedback but please don't treat these materials as the gold standard. They worked for me and my situation. 
 
-- 
+1) CV (_Education, Coursework, Awards_): I initially had grades on there as well (Nothing worse than an A-) but a professor recommended against that because the "A-" could catch somebody's eye early. I know how nitpicky this sounds but I am just echo'ing here
+2) CV (_Research Experience and Community Service_): Some folks said that it is a lot of detail but that was on purpose. My research experience was my strongest asset and I wanted to highlight everything I did. 
+3) CV (_Presentations, Professional Service, Skills_): Even having sections for this is unusual for Ph.D. applicants because we are usually too young to have anything substantial here. I had some space to spare so I decided to include some presentations and talks I had given. One more thing: Don't forget to include your programming skills! 
+4) SOP (_General_): My SOP's were identical across all programs I applied to with the exception of two paragraphs (Of course I adjusted the name of school in the other paragraphs lol). Generally though, I wanted to lead with an eye-catcher (the bolded sentence in the first paragraph). Then, I wanted to get addressing my key weakness (the lack of rigorous coursework) out of the way (that's paragraph #2). Then, up to paragraph #6, I describe my research experience and how it led to my current interest. 
+5) SOP (_Paragraphs #7 and #8_): I use paragraph #7 to talk about how my interests tie into the program. A lot of times, people will put this paragraph as the second paragraph which may work very well with your application. The last paragraph is similar to seventh paragraph but focuses more on research community, centers, and personal fit. 
+6) Personal Statement: This was identical across all schools I applied to.
 
+Overall, I think that being very neat and submitting "pretty" application materials definitely helped my case. I would recommend that to anyone, i.e. even just using LaTeX to format your materials may make a good impression (Though this is certainly not mandatory). 
 
 ### Interviews
 
+After submitting all my applications and trying to financially recover, the waiting game began. Pretty soon after winter break was over, I heard back from Brown that they wanted to have my autumn quarter transcript. About two days after I sent that over, I was officially invited to interview day. 
+
+The interview day (virtual at Brown) was an all-day thing, filled with various info sessions and interviews. I know that about 30 people out of ~380 applicants (That is an insane number) were invited to interview day. Here is a rough outline of my schedule: 
+
+- Info session for all the shortlisted candidates across all the Ph.D. programs in the School of Public Health (incl. Epidemioligy, Biostatistics, etc.)
+- Departmental info session specific to Biostatistics
+- 3-4 interviews with faculty. One interview was with a member of the admissions committee (30min). Additionally, you were allowed to choose up to 3 faculty members for a 15min interview. Since my 30min interview happened to be with a professor I was interested in working with, I ended up choosing only two additional faculty. Thus, I had a total of 3 separate faculty interviews. 
+
+I talked to some folks around preparation and decided to go a bit "lighter" than usual. When I am nervous in interviews (which you bet I was), I tend to jump into rabbit holes and try to impress my knowledge. That is generally not a good strategy since you're being interviewed to assess how you are as a person and the faculty member you're interviewing with could choose to grillyou on something you said. **Keep in mind that you made it to the interview stage because the admissions committee is already impressed with your qualifications on paper**. With that in mind, here is how I prepared: 
+
+- Researched each interviewer's active grants (Important in Biostatistics especially) and what the project was about. Wrote out 2-3 questions about that work. 
+- Researched each interviewer's fields of interest and recent work and crystallized out one or two overlapping interests. I didn't fully read through any person's paper because of the reason I stated above. 
+- Looked into each interviewer's story to look for common ground (If there is something striking that could be a phenomenal ice breaker) 
+
+After having prepared, here is how I experienced the interview: 
+
+- Very relaxed and cordial atmosphere. I was not grilled on any technical questions though I was asked a specific question about my publication. 
+- It felt like a true conversation where faculty seemed to be most interested in who I am as a person and less about my qualifications.
+- It seemed that my interviewers really appreciated that I knew about their active grants. Of course, they don't expect you to know everything about it (that's their job, after all) but just showing that you did your "homework" makes a great impression. 
+
+After I got done with the interviews, I had a feeling that I did really well. 
+
 ### The Waiting Game
 
+Ironically, despite an overwhelming feeling that did super well, I did't hear back for a really long time. In previous stages, Brown had been very quick, so I expected a decision within 2 weeks of the interview. One month, then two months passed--and nothing. It was really tough on my mental health because I had only heard back negative news from the other programs so far and I was losing hope. 
+
+Then, in the end of March, I got the email and call that I was admitted. I had gotten off the waitlist. 
+
+My advice to you while you wait: Please don't tie your personal value into these applications. I knew coming in that I was an excellent candidate but also how stiff the competition was. Ph.D. admissions truly are a blackbox and as long as you do everything in your power to maximize your chances, you should be **very** proud of yourself. 
+
 ## Decision Time 
+
+### My Final Results 
+
+As of April 15th (Decision day), these are my results from the admissions process: 
+
+| Type  | Institution                    | Program       | Decision |
+|-------|--------------------------------|---------------|----------|
+| Ph.D. | UC Berkeley                    | Biostatistics | Rejection          |
+| Ph.D. | University of Washington       | Biostatistics | Rejection         |
+| Ph.D. | Columbia                       | Biostatistics | Rejection; Admitted to MS without funding         |
+| Ph.D. | Harvard University             | Biostatistics | Rejection         |
+| Ph.D. | Yale University                | Biostatistics | Rejection         |
+| Ph.D. | University of Michigan         | Biostatistics | Rejection; Admitted to MS without funding         |
+| Ph.D. | Johns Hopkins University       | Biostatistics | Rejection         |
+| Ph.D. | University of Chicago          | Data Science  | Rejection         |
+| Ph.D. | Brown University               | Biostatistics | Accepted; From waitlist         |
+| M.Sc. | University of British Columbia | Statistics    | Accepted; With full funding         |
+| M.Sc. | McGill                         | Biostatistics | Accepted; With full funding         |
+| M.Sc. | McGill                         | Statistics    | Rejection         |
+| M.Sc. | University of Toronto          | Statistics    | Have not heard back         |
+
+As you can see, it was a tough cycle. I was very surprised by some rejections and less so by others. One important thing I want to mention: I believe I got rejected from most programs because I was not a "traditional" math/stat undergrad from a great school. There is only so much I can do to remedy that ex-post. I decided to still share this post because I had been told from faculty and mentors that the materials themselves were strong. Remind yourself that it only takes one singular program to admit you. 
+
+### Visit Day and Decisions
+
+Brown ended up flying me out and organizing a visit day. I felt like it was a particularly strong match because of the cordial and down-to-earth department culture. I was at the time still debating between McGill and Brown--since I could have (with an almost certain guarantee) transferred into the Ph.D. program after Year #1. 
+
+My decision ended up coming down to: 
+
+- Research fit 
+- Stipend and benefits (Brown pays one of the highest stipends I have ever heard of) 
+- Departmental/ Culture fit 
+
+## Final Thoughts
+
+Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. If you are a non-traditional applicant, I invite you to reach out to me to have a chat (Caveat: Come fall, I will likely have very limited availability, but I would be happy to chat over the summer). Lastly, please reach out to me if you have any burning questions so I can answer them here.  
 
 
