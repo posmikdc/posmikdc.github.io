@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Applying to Biostatistics Ph.D. Programs 
-date: 2023-04-25 10:14:00-0400
+date: 2024-04-25 10:14:00-0400
 description: My experience applying to Ph.D. programs in Biostatistics 
 tags: biostatistics admission phd 
 categories: 
-giscus_comments: true
+giscus_comments: false 
 related_posts: false
 toc:
   sidebar: left
@@ -209,6 +209,4 @@ Funding is an important thing to consider, as well. Brown was amongst the top-pa
 
 ## Final Thoughts
 
-Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. If you are a non-traditional applicant, I invite you to reach out to me to have a chat (Caveat: Come fall, I will likely have very limited availability, but I would be happy to chat over the summer). Lastly, please reach out to me if you have any burning questions so I can answer them here.  
-
-
+Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. If you are a non-traditional applicant, I invite you to reach out to me to have a chat (Caveat: Come fall, I will likely have very limited availability, but I would be happy to chat over the summer). Lastly, please reach out to me if you have any burning questions so I can answer them here.
