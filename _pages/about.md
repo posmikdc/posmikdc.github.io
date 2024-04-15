@@ -26,8 +26,6 @@ I was previously a graduate student at the University of Chicago and a graduate 
 
 In my free-time, I am an avid outdoorsman, mountaineer, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu.
 
-You can access my most updated CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf). 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/basecamp.jpg" title="Everest Basecamp Hike in '22" class="img-fluid rounded z-depth-1" %}
