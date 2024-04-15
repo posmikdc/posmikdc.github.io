@@ -9,10 +9,7 @@ category: applied
 
 ## Repository Link
 
-{% if site.data.repositories.github_repos %}
-
-{% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
-{% endif %}
+Please access the repository [here](https://github.com/posmikdc/jsfa2022). 
 
 ## Overview
 
