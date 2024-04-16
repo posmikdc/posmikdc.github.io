@@ -13,7 +13,7 @@ toc:
 
 My application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall! 
 
-When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I understand how valuable this advice and I want to pay it forward to the next generation of aspiring Biostatisticians. 
+When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffman](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I understand how valuable this advice and I want to pay it forward to the next generation of aspiring Biostatisticians. 
 
 If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional and/or underrepresented applicant, I would be happy to glance over your work (availability permitting). In your email, briefly describe why you are seeking what specific advice. 
 
