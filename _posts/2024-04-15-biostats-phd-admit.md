@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Applying to Biostatistics Ph.D. Programs 
-date: 2024-04-25 10:14:00-0400
+date: 2024-04-15 10:14:00-0400
 description: My experience applying to Ph.D. programs in Biostatistics 
 tags: biostatistics admission phd 
 categories: 
