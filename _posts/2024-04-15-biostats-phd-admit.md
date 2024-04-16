@@ -5,7 +5,7 @@ date: 2024-04-15 10:14:00-0400
 description: My experience applying to Ph.D. programs in Biostatistics 
 tags: biostatistics admission phd 
 categories: 
-giscus_comments: true 
+giscus_comments: false 
 related_posts: false
 toc:
   sidebar: left
@@ -13,35 +13,33 @@ toc:
 
 My application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall! 
 
-When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I want to pay their advice forward to the next generation of aspiring Biostatisticians. 
+When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I understand how valuable this advice and I want to pay it forward to the next generation of aspiring Biostatisticians. 
 
-If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional applicant, I would be happy to glance over your work (availability permitting).
+If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional and/or underrepresented applicant, I would be happy to glance over your work (availability permitting). In your email, briefly describe why you are seeking what specific advice. 
 
 **A Preliminary Disclaimer:** 
 
-Please note that this post represents my opinions alone. My situation and circumstances may be quite different from you. In that sense, please take all opinions with a grain of salt. When stating/ recalling facts, I will do so to the best of my availability. Please [reach out to me](mailto:posmikdc@gmail.com) if you find any inaccuracies. 
+Please note that this post represents my opinions alone. My situation and circumstances may be quite different from you. In that sense, please take all opinions with a grain of salt. When stating/ recalling facts, I will do so to the best of my availability. Please [reach out to me](mailto:posmikdc@gmail.com) if you find any factual inaccuracies. 
 
 ## My Background
 
-I graduated from a large public state school with degrees in Economics, Business Analytics, and a minor in Mathematics. Before that, I completed an Associate's degree in Business Administration at a community college within the University of Cincinnati system. 
+I am originally from Munich, Germany and I graduated from a large public state school with degrees in Economics, Business Analytics, and a minor in Mathematics. Before that, I completed an Associate's degree in Business Administration at a community college. 
 
-After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab at the University of Chicago](https://urbanlabs.uchicago.edu/labs/energy-environment), I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very technical (i.e. I wasapplying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. 
+After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab at the University of Chicago](https://urbanlabs.uchicago.edu/labs/energy-environment), I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very technical (i.e. I was applying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. 
 
 After 8 months, I decided to leave the E&E Lab and start my studies as a non-degree-seeking graduate student at the University of Chicago. The rationale was that I needed some more rigorous coursework (e.g., analysis) under my belt to be a competitive candidate for Ph.D. programs in (Bio-)Statistics.
 
-If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf) (Note that this is my current CV, not the one I submitted. I share the CV I submitted later in this post.). 
+If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf) (Note that this is my current CV, not the one I submitted. Keep scrolling if you are interested in the CV I submitted). 
 
 ### My Interests and Goals
 
-I am interested in the intersection of causal inference and statistical network analysis. In particular, I care about causal inference in high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. Ultimately, I would like to apply my work at the interface of public health and climate, helping policymakers make more informed decisions in response to environmental disasters and global warming.
+I am interested at the intersection of causal inference and statistical network analysis. In particular, I care about causal inference in high-dimensional networks, non-parametric and assumption-lean methodology, and dynamic treatment regimes. Ultimately, I would like to apply my work at the interface of public health and climate, helping policymakers make more informed decisions in response to environmental disasters and global warming.
 
-With respect to my post-Ph.D. goals, I think the following breakdown (currently) describes it best. 
+With respect to my post-Ph.D. goals, I oscillate around the following numbers: 
 
-- A career in academia: 55%
-- A research career in a public/ think tank role: 43%
-- A career in private industry: 2%
-
-### Why Biostatistics
+- A career in academia: `55%`
+- A research career in a public/ think tank role: `43%`
+- A career in private industry: `2%`
 
 When it came down to sending out my applications, I ended up applying exclusively to Biostatistics Ph.D. programs (with the exception of one program). Here is why: 
 
@@ -51,16 +49,16 @@ When it came down to sending out my applications, I ended up applying exclusivel
 
 ### My Weaknesses
 
-- **Undergraduate background**: I majored in neither Statistics or Math in undergrad. Although my coursework was certainly not _inadequate_, I know that competing with math and stat majors from Ivy+ universities was going to be challenging. On that note, my undergraduate institution is not particularly academically renowned in my fields of study. 
-- **Recommendations**: This is a mixed bag but I actually didn't end up with a single UChicago recommender. Only one of my recommenders was a Statistician (+1 Economist, +1 Operations Researcher). Fun fact: I was going to end up getting a recommendation from a UChicago prof but I did so poorly on a midterm, we decided that wouldn't be wise lol (So keep your head up!). One thing that was devestating to me is that I actually did not get a letter from the UChicago lab I worked at (I would've had to stay longer, by lab policy). This was a huge disadvantage.   
-- **Graduate coursework**: I was enrolled in a full-time non-degree-seeking program taking graduate coursework, but that is still not the same as an MS in Statistics.
+- **Undergraduate background**: I majored in neither Statistics nor Math in undergrad. Although my coursework was certainly not completely unrelated to (Bio-)Statistics, I know that competing with math and stat majors from Ivy+ universities was going to be challenging. On that note, my undergraduate institution is not particularly renowned in Statistics. 
+- **Recommendations**: This is a mixed bag but I actually didn't end up with a single UChicago recommender. Only one of my recommenders (who was my professor for my graduate ML course senior year) was a Statistician (+1 Economist, +1 Operations Researcher). (Not so) fun fact: I was going to get a recommendation from a UChicago professor but I did so poorly on the midterm that we decided a letter from him wouldn't be wise lol (So keep your head up; you're allowed to have accidents). Another thing that was less than ideal for me is that I did not get a letter from the UChicago lab I worked at. Lab policy dictates that you have to stay a certain amount of time to be eligible for a letter and I did not do that--that probably wasn't great.  
+- **Graduate coursework**: I was enrolled in a full-time non-degree-seeking program taking graduate coursework, but that is not the same as an MS in Statistics.
 
 ### My Strengths 
 
-- **My Publication**: I have a single-author peer-reviewed publication from undergrad. Though the paper doesn't propose any new statistical methodology, it does focus on the application of some interesting methods in novel ways and applies to data. I think that really helped me. Moreover, the professor who supervised this thesis (an Economist) wrote me a kick-ass letter of recommendation.
-- **Research Experience**: Ironically, my application profile was flipped when compared to most traditional applicants. Usually, applicants to (Bio-)Statistics Ph.D.'s are math/stat undergrad majors from very respectable institutions with little to no research experience. My profile was the opposite of that. I had almost two years worth of full-time research experience but a lack of formal preparation. I think my research background in causal inference and ML (in addition to my publication) were my strongest assets.
+- **My Publication**: I have a single-author peer-reviewed publication from undergrad. Though the paper doesn't propose any new statistical methodology, it does focus on the application of some interesting methods in novel ways and applies them to data. I think that paper really helped my case. Moreover, the professor who supervised this thesis (an economist) wrote me a kick-ass letter of recommendation.
+- **Research Experience**: Ironically, my application profile was the inverse of most other ("traditional") applicants. Usually, applicants to (Bio-)Statistics Ph.D.'s are math/stat undergrad majors from very respectable institutions with little to no research experience. My profile was the opposite of that. I had almost two years worth of full-time research experience but a lack of formal preparation. I think my research background in causal inference and ML (in addition to my publication) were my strongest assets.
 - **Grades**: I had excellent grades throughout my undergrad. During my first quarter at UChicago, I got two "A-" and one "Pass" (Injury related). The latter is respectable though certainly not outstanding. 
-- **Leadership Experience**: I do think that my leadership roles--e.g., founding a successful data science / social justic org in undergrad--was a big bonus on my application. 
+- **Leadership Experience**: I do think that my leadership roles--e.g., founding a successful data science / social justice org in undergrad--was a big bonus on my application. 
 
 ## The Application Process
 
@@ -96,11 +94,11 @@ One more thing: Since I was ready to get rejected from all programs, I was worki
 
 ### Preparation
 
-First things first, yes I did take the GRE. I performed slighly above average, but nothing outstanding. Overall, I found the GRE to be a colossal waste of time, money, and energy. If I could redo my application cycle, I would have opted to not take it and scratch the programs that require it off my list. After all, with all the evidence that is out there showing how the GRE puts marginalized students at a disadvantage, merely requiring the GRE is a huge red flag for me. 
+First things first, I decided to take the GRE. I performed slighly above average, but nothing outstanding. Overall, I found the GRE to be a colossal waste of time, money, and energy. If I could redo my application cycle, I would have opted to not take it and scratch the programs that require it (Only two of them) off my list. After all, with all the evidence that is out there showing how the GRE puts marginalized students at a disadvantage, merely requiring the GRE is a huge red flag for me. 
 
-I started preparing my application materials very early, around June, because I knew I had a ton of time over the summer (as opposed to zero time in the fall). One thing I did that made life significantly easier for myself and my recommenders is to start a GitHub repository called `grad-apps` that contained everything. At the time I was writing my applications, this repo was public, so all my recommenderes and mentors could have easy access to it. It is now private (and will remain private) for privacy reasons. 
+I started preparing my application materials very early, around June, because I knew I had a ton of time over the summer (as opposed to little to no time in the fall). One thing I did that made life significantly easier for myself and my recommenders is to start a GitHub repository called `grad-apps` that contained all my application materials. At the time I was writing my applications, this repo was public, so all my recommenderes and mentors could have easy access to it. It is now private (and will remain private) for privacy reasons. 
 
-That being said, I am happy to share how I set it up. Here is content of the `README.md` file: 
+That being said, I am happy to share how I set it up. Here is content of the `README.md` file that sketches out the basic setup: 
 
 ```
 Hi! If you are reading this, I want to thank you for helping me in my graduate school application process. Thank you so much for your support. 
@@ -110,38 +108,40 @@ Hi! If you are reading this, I want to thank you for helping me in my graduate s
 * Each program I am applying to has a corresponding branch with the following format: [institution]-[type]-[program], e.g., "uw-phd-biostatistics" for the University of Washington's Biostatistics Ph.D. 
 * Since this is a public repo, please note that you do not have editing access. If you have comments/ suggestions, please do not directly edit these materials. Instead, please use the [comment function](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#) and/or let me know separately. 
 
-Please note that I update this repo every time I make local changes. If you have any questions at all, please reach out to me via email at posmikdc@uchicago.edu or via cell at [xxx]. 
-```
+Please note that I update this repo every time I make local changes. If you have any questions at all, please reach out to me via email or via cell. 
 
-**TLDR**; Create a separate branch for each program you're applying to and let everyone know. 
+[Followed by a table of programs with every deadline]
+```
 
 ### My Application Materials 
 
-I have decided to post all my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, as a first-gen student, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via [email](mailto:posmikdc@gmail.com). 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every year I read a lot of grad school applications from accomplished people that don&#39;t give me the info I&#39;m looking for. It feels like a major hidden curriculum thing. So here&#39;s (my opinion on) how to write a great Statement of Purpose/Research for a PhD program. 🧵 1/</p>&mdash; Roman Feiman (@RomanFeiman) <a href="https://twitter.com/RomanFeiman/status/1585700225280528385?ref_src=twsrc%5Etfw">October 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I have decided to post my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via [email](mailto:posmikdc@gmail.com). 
 
 <object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/brown-biostatistics-phd.pdf" width="580" height="800" type="application/pdf"></object>
 
-Now, I will provide some commentary and context on these application materials. I was extremely lucky to have various faculty and mentors give me feedback but please don't treat these materials as the gold standard. They worked for me and my situation. 
+Now, I will provide some commentary and context on these application materials. I was extremely lucky to have a handful of faculty and UChicago's GRAD advising staff give me feedback. With that being said, please don't treat these materials as the gold standard. They are by no means perfect. 
 
 ### CV
 
-- **Education, Coursework, Awards**: I initially had grades on there as well (Nothing worse than an A-) but a professor recommended against that because the "A-" could catch somebody's eye early. I know how nitpicky this sounds but I am just echo'ing here
-- **Research Experience and Community Service**: Some folks said that it is a lot of detail but that was on purpose. My research experience was my strongest asset and I wanted to highlight everything I did. 
-- **Presentations, Professional Service, Skills**: Even having sections for this is unusual for Ph.D. applicants because we are usually too young to have anything substantial here. I had some space to spare so I decided to include some presentations and talks I had given. One more thing: Don't forget to include your programming skills! 
+- **Education, Coursework, Awards**: I initially had grades on there as well (Nothing worse than an A-) but a professor recommended against that because the "A-" could catch somebody's eye early. I know how nitpicky this sounds but I am just echo'ing what he said here. 
+- **Research Experience and Community Service**: Some folks said that my CV boasts a lot of details but that was on purpose. My research experience was my strongest asset and I wanted to highlight everything I did. 
+- **Presentations, Professional Service, Skills**: Having sections for this is not necessary for Ph.D. applicants because you may not have gathered any substantial experiences yet. I did have some space to spare though, so I decided to include some of the presentations and talks I had given. One more thing: Don't forget to include your programming skills! I know some programs, e.g., UW Biostatistics, explicitly require that on your CV. 
 
 ### SOP and Personal Statement
 
-- **General**: My SOP's were identical across all programs I applied to with the exception of two paragraphs (Of course I adjusted the name of school in the other paragraphs lol). Generally though, I wanted to lead with an eye-catcher (the bolded sentence in the first paragraph). Then, I wanted to get addressing my key weakness (the lack of rigorous coursework) out of the way (that's paragraph #2). Then, up to paragraph #6, I describe my research experience and how it led to my current interest. 
-- **Paragraphs #7 and #8**: I use paragraph #7 to talk about how my interests tie into the program. A lot of times, people will put this paragraph as the second paragraph which may work very well with your application. The last paragraph is similar to seventh paragraph but focuses more on research community, centers, and personal fit. 
-- Personal Statement: This was identical across all schools I applied to.
+- **General**: My SOP's were identical across all programs I applied to with the exception of two paragraphs (Of course I adjusted the name of school in the other paragraphs lol). Generally though, I wanted to lead with an eye-catcher (the bolded sentence in the first paragraph). Then, I wanted to get addressing my main weakness (the lack of rigorous coursework) out of the way (that's paragraph #2). Up to paragraph #6, I describe my research experience and how it led to my current interest. 
+- **Paragraphs #7 and #8**: I use paragraph #7 to talk about how my interests tie into the program/department/faculty members. A lot of times, people will put this paragraph as the second paragraph which may work very well with your application. The last paragraph is similar to seventh paragraph but focuses more on research community, centers, and personal fit. 
+- **Personal Statement**: This was identical across all schools I applied to.
 
-Overall, I think that being very neat and submitting "pretty" application materials definitely helped my case. I would recommend that to anyone, i.e. even just using LaTeX to format your materials may make a good impression (Though this is certainly not mandatory). 
+Overall, I think that being very neat and submitting "pretty" application materials was a tiny Brownie point for me. I would recommend submitting neat materials to anyone and if you can use something like LaTeX you may make an extra good impression. 
 
 ### Interviews
 
-After submitting all my applications and trying to financially recover, the waiting game began. Pretty soon after winter break was over, I heard back from Brown that they wanted to have my autumn quarter transcript. About two days after I sent that over, I was officially invited to interview day. 
+After submitting all my applications and trying to financially recover, the waiting game began. Pretty soon after winter break was over, I heard back from Brown. They wanted to have my autumn quarter transcript. About two days after I sent that over, I was officially invited to interview day. 
 
-The interview day (virtual at Brown) was an all-day thing, filled with various info sessions and interviews. I know that about 30 people out of ~380 applicants (That is an insane number) were invited to interview day. Here is a rough outline of my schedule: 
+The interview day (virtual) was an all-day thing, filled with various info sessions and interviews. I know that about 30 people out of ~380 applicants (which is an insane number) were invited to interview day. Here is a rough outline of my schedule: 
 
 - Info session for all the shortlisted candidates across all the Ph.D. programs in the School of Public Health (incl. Epidemioligy, Biostatistics, etc.)
 - Departmental info session specific to Biostatistics
@@ -155,7 +155,7 @@ I talked to some folks around preparation and decided to go a bit "lighter" than
 
 After having prepared, here is how I experienced the interview: 
 
-- Very relaxed and cordial atmosphere. I was not grilled on any technical questions though I was asked a specific question about my publication. 
+- Very relaxed and cordial atmosphere. I was not grilled on any technical questions though I was asked a specific (but very fair) question about my published paper. 
 - It felt like a true conversation where faculty seemed to be most interested in who I am as a person and less about my qualifications.
 - It seemed that my interviewers really appreciated that I knew about their active grants. Of course, they don't expect you to know everything about it (that's their job, after all) but just showing that you did your "homework" makes a great impression. 
 
@@ -163,11 +163,13 @@ After I got done with the interviews, I had a feeling that I did really well.
 
 ### The Waiting Game
 
-Ironically, despite an overwhelming feeling that did super well, I did't hear back for a really long time. In previous stages, Brown had been very quick, so I expected a decision within 2 weeks of the interview. One month, then two months passed--and nothing. It was really tough on my mental health because I had only heard back negative news from the other programs so far and I was losing hope. 
+Ironically, despite an overwhelming feeling that did super well, I did't hear back for a really long time. In the previous stages, Brown had been very quick, so I expected a decision within 2 weeks of the interview. One month, then two months passed--and nothing. It was really tough on my mental health because I had only heard back negative news from the other programs so far and I was losing hope. Please make sure to take care of yourself while you wait. For me, working out and going to therapy were two great outlets. 
 
-Then, in the end of March, I got the email and call that I was admitted. I had gotten off the waitlist. 
+Then, right before Pi Day (~ mid March), I got the email and call that I was admitted. I had gotten off the waitlist. 
 
 My advice to you while you wait: Please don't tie your personal value into these applications. I knew coming in that I was an excellent candidate but also how stiff the competition was. Ph.D. admissions truly are a blackbox and as long as you do everything in your power to maximize your chances, you should be **very** proud of yourself. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happy Pi Day! 🥧<br>Slice into the π celebration! <a href="https://t.co/3DDtjSnEvk">pic.twitter.com/3DDtjSnEvk</a></p>&mdash; Brown Biostatistics (@BrownBiostats) <a href="https://twitter.com/BrownBiostats/status/1768289259566289263?ref_src=twsrc%5Etfw">March 14, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Decision Time 
 
