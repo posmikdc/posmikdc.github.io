@@ -5,7 +5,7 @@ date: 2024-04-25 10:14:00-0400
 description: My experience applying to Ph.D. programs in Biostatistics 
 tags: biostatistics admission phd 
 categories: 
-giscus_comments: false 
+giscus_comments: true 
 related_posts: false
 toc:
   sidebar: left
