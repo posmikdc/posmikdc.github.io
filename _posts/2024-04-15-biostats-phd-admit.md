@@ -86,9 +86,9 @@ You may also notice that I didn't apply to many other top-ranked departments. Th
 
 I also had an internal ranking. The following factors were most important to me: 
 
-- Substantial research in causal inference and networks: `#1 JHU`, `#2 Brown`, `#3 Yale` `#4 UW`
-- Location and access to nature: `#1 UW`, `#2 Berkeley` 
-- Research fit with individual faculty: `#1 JHU, Berkeley, Brown, Yale`, `#2 Harvard`
+- Substantial research in causal inference and networks: `#1` JHU, `#2` Brown, `#3` UW, `#4` Yale 
+- Location and access to nature: `#1` UW, `#2` Berkeley 
+- Research fit with individual faculty: `#1` JHU, Berkeley, Brown, Yale, `#2` Harvard
 
 One more thing: Since I was ready to get rejected from all programs, I was working towards being a more competitive applicant during the next cycle while I was applying. In that sense, I had started a graduate research assistantship at UChicago in causal inference methodology and started TA'ing. This forward-looking approach really helped me mentally since I kept reassuring myself that I can just try again next year. 
 
@@ -100,22 +100,18 @@ I started preparing my application materials very early, around June, because I 
 
 That being said, I am happy to share how I set it up. Here is content of the `README.md` file that sketches out the basic setup: 
 
-```
-Hi! If you are reading this, I want to thank you for helping me in my graduate school application process. Thank you so much for your support. 
+_Hi! If you are reading this, I want to thank you for helping me in my graduate school application process. Thank you so much for your support._ 
 
 * You can navigate this repository via the branches
 * Please access my most up-to-date CV and this `README` via this main branch 
 * Each program I am applying to has a corresponding branch with the following format: [institution]-[type]-[program], e.g., "uw-phd-biostatistics" for the University of Washington's Biostatistics Ph.D. 
 * Since this is a public repo, please note that you do not have editing access. If you have comments/ suggestions, please do not directly edit these materials. Instead, please use the [comment function](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#) and/or let me know separately. 
 
-Please note that I update this repo every time I make local changes. If you have any questions at all, please reach out to me via email or via cell. 
+_Please note that I update this repo every time I make local changes. If you have any questions at all, please reach out to me via email or via cell._
 
-[Followed by a table of programs with every deadline]
-```
+_[Followed by a table of programs with every deadline]_
 
 ### My Application Materials 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every year I read a lot of grad school applications from accomplished people that don&#39;t give me the info I&#39;m looking for. It feels like a major hidden curriculum thing. So here&#39;s (my opinion on) how to write a great Statement of Purpose/Research for a PhD program. 🧵 1/</p>&mdash; Roman Feiman (@RomanFeiman) <a href="https://twitter.com/RomanFeiman/status/1585700225280528385?ref_src=twsrc%5Etfw">October 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I have decided to post my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via [email](mailto:posmikdc@gmail.com). 
 
@@ -161,15 +157,15 @@ After having prepared, here is how I experienced the interview:
 
 After I got done with the interviews, I had a feeling that I did really well. 
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every year I read a lot of grad school applications from accomplished people that don&#39;t give me the info I&#39;m looking for. It feels like a major hidden curriculum thing. So here&#39;s (my opinion on) how to write a great Statement of Purpose/Research for a PhD program. 🧵 1/</p>&mdash; Roman Feiman (@RomanFeiman) <a href="https://twitter.com/RomanFeiman/status/1585700225280528385?ref_src=twsrc%5Etfw">October 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### The Waiting Game
 
 Ironically, despite an overwhelming feeling that did super well, I did't hear back for a really long time. In the previous stages, Brown had been very quick, so I expected a decision within 2 weeks of the interview. One month, then two months passed--and nothing. It was really tough on my mental health because I had only heard back negative news from the other programs so far and I was losing hope. Please make sure to take care of yourself while you wait. For me, working out and going to therapy were two great outlets. 
 
-Then, right before Pi Day (~ mid March), I got the email and call that I was admitted. I had gotten off the waitlist. 
+Then, around mid March, I got the email and call that I was admitted. I had gotten off the waitlist. 
 
 My advice to you while you wait: Please don't tie your personal value into these applications. I knew coming in that I was an excellent candidate but also how stiff the competition was. Ph.D. admissions truly are a blackbox and as long as you do everything in your power to maximize your chances, you should be **very** proud of yourself. 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happy Pi Day! 🥧<br>Slice into the π celebration! <a href="https://t.co/3DDtjSnEvk">pic.twitter.com/3DDtjSnEvk</a></p>&mdash; Brown Biostatistics (@BrownBiostats) <a href="https://twitter.com/BrownBiostats/status/1768289259566289263?ref_src=twsrc%5Etfw">March 14, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Decision Time 
 
@@ -181,23 +177,21 @@ As of April 15th (Decision day), these are my results from the admissions proces
 |-------|--------------------------------|---------------|----------|
 | Ph.D. | UC Berkeley                    | Biostatistics | Rejection          |
 | Ph.D. | University of Washington       | Biostatistics | Rejection         |
-| Ph.D. | Columbia                       | Biostatistics | Rejection; Admitted to MS without funding         |
+| Ph.D. | Columbia                       | Biostatistics | Rejection; _Admitted to MS without funding_         |
 | Ph.D. | Harvard University             | Biostatistics | Rejection         |
 | Ph.D. | Yale University                | Biostatistics | Rejection         |
-| Ph.D. | University of Michigan         | Biostatistics | Rejection; Admitted to MS without funding         |
+| Ph.D. | University of Michigan         | Biostatistics | Rejection; _Admitted to MS without funding_         |
 | Ph.D. | Johns Hopkins University       | Biostatistics | Rejection         |
 | Ph.D. | University of Chicago          | Data Science  | Rejection         |
-| Ph.D. | Brown University               | Biostatistics | Accepted; From waitlist         |
-| M.Sc. | University of British Columbia | Statistics    | Accepted; With full funding         |
-| M.Sc. | McGill                         | Biostatistics | Accepted; With full funding         |
+| Ph.D. | Brown University               | Biostatistics | Accepted; _From waitlist_         |
+| M.Sc. | University of British Columbia | Statistics    | Accepted; _With full funding_         |
+| M.Sc. | McGill                         | Biostatistics | Accepted; _With full funding_         |
 | M.Sc. | McGill                         | Statistics    | Rejection         |
-| M.Sc. | University of Toronto          | Statistics    | Have not heard back         |
+| M.Sc. | University of Toronto          | Statistics    | Did not hear back by 04/15         |
 
 As you can see, it was a tough cycle. I was very surprised by some rejections and less so by others. One important thing I want to mention: I believe I got rejected from most programs because I was not a "traditional" math/stat undergrad from a great school. There is only so much I can do to remedy that ex-post. I decided to still share this post because I had been told from faculty and mentors that the materials themselves were strong. Remind yourself that it only takes one singular program to admit you. 
 
-### Visit Day and Decisions
-
-## My Decision
+### My Decision
 
 Brown ended up flying me out and organizing a visit day. I felt like it was a particularly strong match because of the cordial and down-to-earth department culture. I was at the time still debating between McGill and Brown--since I could have (with an almost certain guarantee) transferred into the Ph.D. program after Year #1. 
 
@@ -207,10 +201,10 @@ My decision ended up coming down to:
 - Stipend and benefits: Brown pays one of the highest stipends I have heard of.  
 - Departmental/ Culture fit: The department seems amazing and my gut is telling me I will be very happy there. 
 
-## Funding
+### Funding
 
 Funding is an important thing to consider, as well. Brown was amongst the top-paying (if not _the_ top-paying) schools out of my list. In my admissions offer, alongside health insurance and full tuition, I am guaranteed a stipend of $49,012 and a one-time first-year supplement stipend of $1,750. When evaluating funding decisions, it does sometimes help looking at whether the school's graduate students are unionized (Brown's are).  
 
-## Final Thoughts
+### Final Thoughts
 
 Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. If you are a non-traditional applicant, I invite you to reach out to me to have a chat (Caveat: Come fall, I will likely have very limited availability, but I would be happy to chat over the summer). Lastly, please reach out to me if you have any burning questions so I can answer them here.
