@@ -11,7 +11,7 @@ toc:
   sidebar: left
 ---
 
-I just finished my application cycle for Ph.D. programs in Biostatistics and I am thrilled to join Brown's Biostatistics department in the fall. 
+My application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall! 
 
 When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffmann](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I want to pay their advice forward to the next generation of aspiring Biostatisticians. 
 
