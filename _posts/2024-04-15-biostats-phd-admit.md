@@ -143,7 +143,7 @@ The interview day (virtual) was an all-day thing, filled with various info sessi
 - Departmental info session specific to Biostatistics
 - 3-4 interviews with faculty. One interview was with a member of the admissions committee (30min). Additionally, you were allowed to choose up to 3 faculty members for a 15min interview. Since my 30min interview happened to be with a professor I was interested in working with, I ended up choosing only two additional faculty. Thus, I had a total of 3 separate faculty interviews. 
 
-I talked to some folks around preparation and decided to go a bit "lighter" than usual. When I am nervous in interviews (which you bet I was), I tend to jump into rabbit holes and try to impress my knowledge. That is generally not a good strategy since you're being interviewed to assess how you are as a person and the faculty member you're interviewing with could choose to grillyou on something you said. **Keep in mind that you made it to the interview stage because the admissions committee is already impressed with your qualifications on paper**. With that in mind, here is how I prepared: 
+I talked to some folks around preparation and decided to go a bit "lighter" than usual. When I am nervous in interviews (which you bet I was), I tend to jump into rabbit holes and try to impress with my knowledge when I feel uncomfortable. That is generally not a good strategy since (1) you're being interviewed to assess how you are as a person, (2) the faculty member you're interviewing with could choose to grill you on something you said, and (3) you probably won't woo any faculty members with any subject-matter knowledge you have anyway (Remember: They're the experts; you're the aspiring Ph.D. student). **Keep in mind that you made it to the interview stage because the admissions committee is already impressed with your qualifications on paper**. With that in mind, here is how I prepared: 
 
 - Researched each interviewer's active grants (Important in Biostatistics especially) and what the project was about. Wrote out 2-3 questions about that work. 
 - Researched each interviewer's fields of interest and recent work and crystallized out one or two overlapping interests. I didn't fully read through any person's paper because of the reason I stated above. 
@@ -165,7 +165,7 @@ Ironically, despite an overwhelming feeling that did super well, I did't hear ba
 
 Then, around mid March, I got the email and call that I was admitted. I had gotten off the waitlist. 
 
-My advice to you while you wait: Please don't tie your personal value into these applications. I knew coming in that I was an excellent candidate but also how stiff the competition was. Ph.D. admissions truly are a blackbox and as long as you do everything in your power to maximize your chances, you should be **very** proud of yourself. 
+My advice to you while you wait: Please don't tie your personal value into these applications. I knew coming in that I was an excellent candidate (in my eyes and that's all that matters) but also how stiff the competition was. Ph.D. admissions truly are a blackbox and as long as you do everything in your power to maximize your chances, you should be **very** proud of yourself. 
 
 ## Decision Time 
 
