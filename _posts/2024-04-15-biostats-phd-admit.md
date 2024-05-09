@@ -11,25 +11,25 @@ toc:
   sidebar: left
 ---
 
-My application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall! 
+The application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall! 
 
-When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffman](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). Being a first-generation college student, a community college grad, and an international student-- I understand how valuable this advice and I want to pay it forward to the next generation of aspiring Biostatisticians. 
+When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffman](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). I am a first-generation college student, a community college grad, and an international student, so I understand how valuable testimony like this can be. With this blog post, I want to pay it forward to the next generation of aspiring Biostatisticians. 
 
-If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional and/or underrepresented applicant, I would be happy to glance over your work (availability permitting). In your email, briefly describe why you are seeking what specific advice. 
+If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional and/or underrepresented applicant, I would be happy to glance over your work (availability permitting). In your email, briefly describe why you are reaching out and what specific advice you are seeking. 
 
 **A Preliminary Disclaimer:** 
 
-Please note that this post represents my opinions alone. My situation and circumstances may be quite different from you. In that sense, please take all opinions with a grain of salt. When stating/ recalling facts, I will do so to the best of my availability. Please [reach out to me](mailto:posmikdc@gmail.com) if you find any factual inaccuracies. 
+Please note that this post represents my opinions alone. My situation and my circumstances may be quite different from yours. Therefore, please take all my opinions with a grain of salt. Please [reach out to me](mailto:posmikdc@gmail.com) if you find any factual inaccuracies. 
 
 ## My Background
 
 I am originally from Munich, Germany and I graduated from a large public state school with degrees in Economics, Business Analytics, and a minor in Mathematics. Before that, I completed an Associate's degree in Business Administration at a community college. 
 
-After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab at the University of Chicago](https://urbanlabs.uchicago.edu/labs/energy-environment), I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very technical (i.e. I was applying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. 
+After graduation, I briefly worked at an economic research consultancy focusing on energy economics. Coming out of undergrad, I was dead set on pursuing a Ph.D. in Economics, so when I was offered a pre-doc position at the [Energy & Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment) at the University of Chicago, I jumped on it. I worked at the intersection of causal inference and machine learning there, although my work was not very "technical" (i.e. I was applying existing methods to new data sets rather than developing new statistical methods). Throughout this time, I became more and more fascinated with Statistics. 
 
 After 8 months, I decided to leave the E&E Lab and start my studies as a non-degree-seeking graduate student at the University of Chicago. The rationale was that I needed some more rigorous coursework (e.g., analysis) under my belt to be a competitive candidate for Ph.D. programs in (Bio-)Statistics.
 
-If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/cv/blob/main/cv.pdf) (Note that this is my current CV, not the one I submitted. Keep scrolling if you are interested in the CV I submitted). 
+If you want a more comprehensive overview, check out my CV [here](https://github.com/posmikdc/latex/blob/main/cv/cv.pdf) (Note that this is my current CV, not the one I submitted. Keep scrolling if you are interested in the CV I submitted). 
 
 ### My Interests and Goals
 
