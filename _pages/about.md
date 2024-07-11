@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://biostatistics.sph.brown.edu'>Brown University, Department of Biostatistics</a>.
+subtitle: <a href='https://biostatistics.sph.brown.edu'>Brown University School of Public Health, Department of Biostatistics</a>.
 
 profile:
   align: right
@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Brown University</p>
-    <p>Department of Biostatistics</p>
+    <p>Biostatistics Department</p>
     <p>121 S Main St, Providence, RI 02903</p>
 
 news: true  # includes a list of news items
@@ -18,9 +18,9 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I am a doctoral student at the Department of Biostatistics at Brown University. 
+My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I am a doctoral student in the Biostatistics Department at Brown University. 
 
-My interest lies at the intersection of causal inference, statistical network analysis, and machine learning. I am especially concerned with developing assumption-lean inference methods for high-dimensional and dependent data. As a Biostatistician, I am motivated by applying these tools in public health, climate research, and medicine.   
+My interest lies at the intersection of causal inference, statistical network analysis, and machine learning. My goal is to develop assumption-lean inference methods for high-dimensional and dependent data. I am motivated by applying my work to problems in public health and medicine.   
 
 I was previously at the University of Chicago where I was fortunate to work with [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/). Before that, I worked on causal inference and machine learning at the [UChicago Energy and Environment Lab](https://urbanlabs.uchicago.edu/labs/energy-environment). 
 
