@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I am a doctoral student in the Biostatistics Department at Brown University. 
 
-Broadly, I am interested in causality, network analysis, and high-dimensional statistics. Currently, I work with Drs. [Roee Gutman](https://roeegutman.wordpress.com) and [Arman Oganisian](https://stablemarkets.netlify.app) on Bayesian causal inference and machine learning methods. I am motivated by applying my work to problems in public health and medicine.   
+My goal is to develop scalable and assumption-lean inference methods for high-dimensional networks. I find brain imaging applications, such as connectivity and disease detection, particularly interesting. Currently, I am fortunate to work with Drs. [Roee Gutman](https://roeegutman.wordpress.com) and [Arman Oganisian](https://stablemarkets.netlify.app) on Bayesian causal inference and machine learning methods. 
 
 Previously, I was fortunate to work with [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
 
