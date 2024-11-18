@@ -22,7 +22,7 @@ My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I
 
 My goal is to develop scalable and assumption-lean inference methods for high-dimensional networks. I am drawn to inference problems that involve geometry and shape. I find brain imaging applications, such as connectivity and disease detection, particularly interesting. I am very fortunate to be advised by Prof. [Ani Eloyan](http://www.anieloyan.com). 
 
-Previously, I was worked with [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
+Previously, I worked with [Prof. Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
 
 In my free-time, I am an avid outdoorsman, cyclist, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu.
 
