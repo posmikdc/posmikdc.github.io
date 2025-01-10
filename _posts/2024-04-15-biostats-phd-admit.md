@@ -15,7 +15,7 @@ The application cycle for Ph.D. programs in Biostatistics is finished and I am t
 
 When I was preparing my applications, I profited from other folks sharing their experiences, especially [Kat Hoffman](https://www.khstats.com/blog/phd-apps/) and [Simon Couch](https://www.simonpcouch.com/blog/2021-03-15-apply-to-stats-grad-school/). I am a first-generation college student, a community college grad, and an international student, so I understand how valuable testimony like this can be. With this blog post, I want to pay it forward to the next generation of aspiring Biostatisticians. 
 
-If you are getting ready to apply, I hope my experiences can help you out. Please don't hesitate to reach out to me at [posmikdc@gmail.com](mailto:posmikdc@gmail,com). If you are a non-traditional and/or underrepresented applicant, I would be happy to glance over your work (availability permitting). In your email, briefly describe why you are reaching out and what specific advice you are seeking. 
+If you are getting ready to apply, I hope my experiences can help you out. 
 
 **A Preliminary Disclaimer:** 
 
@@ -207,4 +207,4 @@ Funding is an important thing to consider, as well. Brown was amongst the top-pa
 
 ### Final Thoughts
 
-Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. If you are a non-traditional applicant, I invite you to reach out to me to have a chat (Caveat: Come fall, I will likely have very limited availability, but I would be happy to chat over the summer). Lastly, please reach out to me if you have any burning questions so I can answer them here.
+Overall, I am very happy with how things went. I came into this process having two clear favorites--UW and Berkeley Biostatistics--and am coming out very satisfied despite getting rejected by both. This process is very intimidating and I am hoping that my thoughts add a little bit of clarity. 
