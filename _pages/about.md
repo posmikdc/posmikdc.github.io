@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I am a doctoral student in the Biostatistics Department at Brown University. 
 
-My goal is to develop scalable and assumption-lean inference methods for high-dimensional networks. I am drawn to inference problems that involve geometry and shape. I find brain imaging applications, such as connectivity and disease detection, particularly interesting. I am very fortunate to be advised by Prof. [Ani Eloyan](http://www.anieloyan.com). 
+I am drawn to large-scale inference problems that involve geometry, shape, and networks. Currently, I am most interested in applying manifold learning and topological data analysis to brain imaging. My goal is to develop methods that advance precision medicine for neurodegenerative diseases, such as Alzheimer's. I am very fortunate to be advised by Prof. [Ani Eloyan](http://www.anieloyan.com). 
 
 Previously, I worked with Prof. [Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
 
