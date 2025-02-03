@@ -13,8 +13,8 @@ profile:
     <p>Department of Biostatistics</p>
     <p>121 S Main St, Providence, RI 02903</p>
 
-news: true  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
+news: false  # includes a list of news items
+latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
@@ -22,6 +22,6 @@ My name is Daniel Posmik [(He/Him/His)](https://pronouns.org/what-and-why) and I
 
 I am drawn to large-scale inference problems that involve geometry, shape, and networks. Currently, I am most interested in applying manifold learning and topological data analysis to brain imaging. My goal is to develop methods that advance precision medicine for neurodegenerative diseases, such as Alzheimer's. I am very fortunate to be advised by Prof. [Ani Eloyan](http://www.anieloyan.com). 
 
-Previously, I worked with Prof. [Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
+Previously, I worked on causal decomposition methods with Prof. [Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
 
 In my free-time, I am an avid outdoorsman, cyclist, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu.
