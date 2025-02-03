@@ -35,14 +35,8 @@ layout: default
     <h2>
       <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
     </h2>
-    {%- include news.html limit=true %} {%- endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers -%}
-    <h2>
-      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-    </h2>
-    {%- include selected_papers.html %} {%- endif %}
+    {%- include news.html limit=true %} {%- endif %} selected_papers.html %} {%-
+    endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts -%}
@@ -51,6 +45,12 @@ layout: default
     </h2>
     {%- include latest_posts.html %} {%- endif %}
 
+    <!-- Selected papers -->
+    {% if page.selected_papers -%}
+    <h2>
+      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+    </h2>
+    {%- include
     <!-- Social -->
     {%- if page.social %}
     <div class="social">
