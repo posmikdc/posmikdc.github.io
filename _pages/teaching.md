@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description:
-nav: false
+nav: true
 ---
 
 At the University of Chicago, I am a Teaching Assistant (TA) for the following course:
