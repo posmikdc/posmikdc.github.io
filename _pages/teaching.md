@@ -4,6 +4,7 @@ permalink: /teaching/
 title: teaching
 description:
 nav: true
+nav_order: 4
 ---
 
 At the University of Chicago, I am a Teaching Assistant (TA) for the following course:
