@@ -25,18 +25,3 @@ I am drawn to large-scale inference problems that involve geometry, shape, and n
 Previously, I worked with Prof. [Guanglei Hong](https://voices.uchicago.edu/ghong/) at the University of Chicago.
 
 In my free-time, I am an avid outdoorsman, cyclist, and lover of dogs. If you are interested in having a chat on any of the above, please do not hesitate to reach out to me at daniel_posmik[at]brown[dot]edu.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/basecamp.jpg" title="Everest Basecamp Hike in '22" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/climbing.jpg" title="Climbing at the Red River Gorge" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/choji.jpg" title="Petting my friend's dog Choji" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    From left to right: (1) Hiking to Everest Basecamp in Nepal in 2022, (2) Climbing at the Red River Gorge, (3) Petting my friend's dog Choji on a hike in Wisconsin     
-</div>
