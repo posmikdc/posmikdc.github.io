@@ -245,3 +245,12 @@ main {
 @media (max-width: 600px) {
   .blog-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Footer ─────────────────────────────────────────── */
+footer {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 0.82rem;
+  color: #888;
+}
