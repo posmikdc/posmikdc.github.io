@@ -197,6 +197,15 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.pub-abstract-label {
+  font-size: 0.75rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+
 /* ── Blog index ─────────────────────────────────────── */
 .page-title {
   font-size: 2.1rem;
