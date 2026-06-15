@@ -1,5 +1,7 @@
 format:
   html:
-    theme: none
-    css: ../style.css
+    theme: cosmo
+    toc: true
+    toc-location: left
+    toc-title: "Contents"
     include-before-body: _nav.html

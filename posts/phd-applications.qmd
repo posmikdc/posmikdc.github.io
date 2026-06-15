@@ -1,6 +1,7 @@
 ---
 title: "Applying to Biostatistics Ph.D. Programs"
 date: 2024-04-15
+description: "My experience applying to Ph.D. programs in Biostatistics"
 ---
 
 The application cycle for Ph.D. programs in Biostatistics is finished and I am thrilled to join Brown's Biostatistics department in the fall!
