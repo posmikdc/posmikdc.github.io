@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <nav>
     <strong class="site-name">Daniel Posmik</strong>
     <div class="nav-links">
@@ -16,9 +15,7 @@
       <a href="blog.html">Blog</a>
     </div>
   </nav>
-
   <main>
-
     <!-- Hero: bio left, photo right -->
     <section class="hero">
       <div class="bio">
@@ -44,7 +41,6 @@
         </div>
       </div>
       <div class="photo">
-        <!-- Replace photo.jpg with your own image -->
         <img src="photo.png" alt="Daniel Posmik">
       </div>
     </section>
@@ -66,17 +62,27 @@
     <section class="content-section" id="publications">
       <h2>Selected Publications</h2>
       <hr>
+      <div class="pub-grid">
 
-      <div class="pub">
-        <p class="pub-title">Paper Title One</p>
-        <p class="pub-authors"><span class="me">D. Posmik</span>, A. Eloyan, Co-Author</p>
-        <p class="pub-venue">Journal / Conference Year (arXiv:XXXX.XXXXX)</p>
-        <a class="pub-pdf" href="#">[PDF]</a>
+        <details class="pub-card">
+          <summary>
+            <img src="jsfa.png" alt="Paper 1">
+            <div class="pub-card-info">
+              <p class="pub-card-title">Paper Title One</p>
+              <p class="pub-card-authors"><span class="me">D. Posmik</span>, A. Eloyan</p>
+              <p class="pub-card-venue">Journal / Conference Year</p>
+            </div>
+          </summary>
+          <div class="pub-card-body">
+            <p>Your custom description.</p>
+            <a href="#">[PDF]</a>
+          </div>
+        </details>
+
+        <!-- Copy the block above for each additional paper -->
+
       </div>
-
     </section>
-
   </main>
-
 </body>
 </html>
