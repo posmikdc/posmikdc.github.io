@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Daniel Posmik</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ]
+    });"></script>
+</head>
+<body>
+  <nav>
+    <strong class="site-name">Daniel Posmik</strong>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+  <main>
+    <h1 class="page-title">Publications</h1>
+    <div class="pub-grid">
+
+      <details class="pub-card">
+        <summary>
+          <img src="images/jsfa2022.jpg" alt="JSFA 2022">
+          <div class="pub-card-info">
+            <p class="pub-card-title">Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach</p>
+            <p class="pub-card-authors"><span class="me">D. Posmik</span></p>
+            <p class="pub-card-venue">Journal of Student Financial Aid / 2022</p>
+          </div>
+        </summary>
+        <div class="pub-card-body">
+          <p class="pub-abstract-label">Abstract</p>
+          <p>Since the fall semester of 2016, first-time international student enrollment (ISE$_{\mathrm{ft}}$) has declined at U.S. colleges and universities. This trend disrupts a steady upwards trajectory of ISE$_{\mathrm{ft}}$ rates. Previous research has demonstrated that various political, social, and macroeconomic factors influence the number of international students studying in the U.S. Exploiting data from the Common Data Set (CDS), I focus on the role financial aid plays as an enrollment predictor for international undergraduate students. A fixed effects model reveals that financial aid is strongly and significantly predictive of ISE$_{\mathrm{ft}}$, yielding a 1.8% enrollment increase per 10% aid increase, all else equal. Interestingly, financial aid is only predictive of ISE$_{\mathrm{ft}}$ if it is awarded in substantial amounts. Extending the work of Bicak and Taylor (2020), I also analyze how the effectiveness of financial aid awards varies within different institutional settings. Random effects regressions reveal that rural, low research, and private universities experience considerable marginal ISE$_{\mathrm{ft}}$ boosts when awarding aid to international students. The findings of this work are primarily directed at institutional leaders who seek to revitalize their institution's ISE$_{\mathrm{ft}}$ policy. Moreover, these insights may inform local policymakers who seek to incent ISE$_{\mathrm{ft}}$.</p>
+          <a href="https://ir.library.louisville.edu/cgi/viewcontent.cgi?article=1802&context=jsfa">[PDF]</a>
+        </div>
+      </details>
+
+      <!-- Copy the block above for each additional paper -->
+
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.pub-card').forEach(card => {
+      card.addEventListener('toggle', () => {
+        card.classList.toggle('expanded', card.open);
+      });
+    });
+  </script>
+</body>
+</html>
