@@ -84,18 +84,12 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>© <span id="year"></span> Daniel Posmik · Template inspired by <a href="https://silviasapora.github.io/" target="_blank">Silvia Sapora</a></p>
-  </footer>
-
   <script>
     document.querySelectorAll('.pub-card').forEach(card => {
       card.addEventListener('toggle', () => {
         card.classList.toggle('expanded', card.open);
       });
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
