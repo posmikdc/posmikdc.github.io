@@ -66,7 +66,7 @@
 
         <details class="pub-card">
           <summary>
-            <img src="jsfa.jpg" alt="Paper 1">
+            <img src="images/paper1.png" alt="Paper 1">
             <div class="pub-card-info">
               <p class="pub-card-title">Paper Title One</p>
               <p class="pub-card-authors"><span class="me">D. Posmik</span>, A. Eloyan</p>
@@ -84,5 +84,13 @@
       </div>
     </section>
   </main>
+
+  <script>
+    document.querySelectorAll('.pub-card').forEach(card => {
+      card.addEventListener('toggle', () => {
+        card.classList.toggle('expanded', card.open);
+      });
+    });
+  </script>
 </body>
 </html>
