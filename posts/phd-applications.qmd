@@ -108,8 +108,9 @@ _[Followed by a table of programs with every deadline]_
 
 I have decided to post my application materials for Brown's Biostatistics Ph.D., the program I will be attending in the fall. It should go without saying that you should **under no circumstances** copy and paste from my materials. That being said, I know that sometimes it is difficult to find good examples of SOP's, personal statements, and CV's. If there are any additional programs that you would like to see my application materials for, please reach out to me via [email](mailto:posmikdc@gmail.com).
 
-<!-- Replace the path below with your actual PDF link -->
-<object data="https://github.com/posmikdc/latex/blob/main/cv/cv.pdf" width="100%" height="800" type="application/pdf"></object>
+<object data="brown-biostatistics-phd.pdf" width="100%" height="800" type="application/pdf">
+  <a href="brown-biostatistics-phd.pdf">Download PDF</a>
+</object>
 
 Now, I will provide some commentary and context on these application materials. I was extremely lucky to have a handful of faculty and UChicago's GRAD advising staff give me feedback. With that being said, please don't treat these materials as the gold standard. They are by no means perfect.
 
